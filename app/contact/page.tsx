@@ -1,0 +1,1 @@
+export default function Contact(){return <main className="mx-auto max-w-4xl px-6 py-20"><h1 className="font-serif text-5xl">Contact</h1><p className="mt-6 text-warm-700">Let’s collaborate on meaningful product and brand experiences.</p></main>}

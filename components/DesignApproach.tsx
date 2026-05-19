@@ -1,0 +1,1 @@
+const items=['Research','Structure','Visual System','Interaction','Delivery'];export default function DesignApproach(){return <div className="grid gap-4 md:grid-cols-5">{items.map(i=><div key={i} className="rounded-xl border border-warm-200 bg-white p-5 text-center text-sm">{i}</div>)}</div>}

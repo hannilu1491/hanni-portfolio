@@ -1,0 +1,2 @@
+import { categories, projects } from '@/data/projects';import CategoryFilter from '@/components/CategoryFilter';import ProjectGrid from '@/components/ProjectGrid';
+export default function ProjectsPage({searchParams}:{searchParams:{category?:string}}){const category=searchParams.category;const filtered=!category||category==='All'?projects:projects.filter(p=>p.category===category);return <main className="mx-auto max-w-6xl px-6 py-16"><h1 className="mb-8 font-serif text-5xl">Projects</h1><CategoryFilter categories={categories}/><ProjectGrid projects={filtered}/></main>}

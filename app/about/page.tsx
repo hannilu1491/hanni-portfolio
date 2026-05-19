@@ -1,0 +1,1 @@
+export default function About(){return <main className="mx-auto max-w-4xl px-6 py-20"><h1 className="font-serif text-5xl">About</h1><p className="mt-6 text-warm-700">7+ years in visual communication, branding, packaging, and illustration—now shaping digital products through UX thinking and visual systems.</p></main>}

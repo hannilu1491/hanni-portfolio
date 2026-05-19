@@ -1,0 +1,1 @@
+export default function Resume(){return <main className="mx-auto max-w-4xl px-6 py-20"><h1 className="font-serif text-5xl">Resume</h1><p className="mt-6 text-warm-700">Download CV and review experience in visual design, brand systems, and UI/UX transition projects.</p></main>}
