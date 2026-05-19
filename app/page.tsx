@@ -1,6 +1,7 @@
 import Hero from '@/components/Hero';
 import FeaturedProjects from '@/components/FeaturedProjects';
 import DesignApproach from '@/components/DesignApproach';
+import DesignSystemSection from '@/components/DesignSystemSection';
 import { projects } from '@/data/projects';
 import Link from 'next/link';
 
