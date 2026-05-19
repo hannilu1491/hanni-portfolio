@@ -7,12 +7,15 @@ html { scroll-behavior: smooth; }
 body { @apply bg-[#fcfbf8] text-warm-900 antialiased; letter-spacing: -0.01em; }
 ::selection { background: rgba(197, 167, 116, 0.35); }
 
-.page-enter { animation: pageEnter .45s ease both; }
-.fade-in { animation: fadeIn .8s ease both; }
-.slide-in { animation: slideIn .8s ease both; }
-.reveal { animation: reveal .9s ease both; animation-timeline: view(); animation-range: entry 12% cover 28%; }
+.page-enter { animation: pageEnter .6s ease-out both; }
+.fade-in { animation: fadeIn .7s ease both; }
+.slide-in { animation: slideIn .7s ease both; }
+.reveal { animation: reveal .7s ease both; animation-timeline: view(); animation-range: entry 10% cover 28%; }
+.float-soft { animation: floatSoft 5s ease-in-out infinite; }
+.float-soft-delay { animation: floatSoft 6s ease-in-out infinite .3s; }
 
-@keyframes pageEnter { from { opacity: .0; } to { opacity: 1; } }
+@keyframes pageEnter { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
 @keyframes slideIn { from { opacity: 0; transform: translateX(14px); } to { opacity: 1; transform: translateX(0); } }
-@keyframes reveal { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes reveal { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes floatSoft { 0%,100% { translate: 0 -4px; } 50% { translate: 0 4px; } }

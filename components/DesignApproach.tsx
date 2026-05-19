@@ -10,14 +10,14 @@ const steps = [
 
 export default function DesignApproach() {
   return (
-    <section className="mx-auto max-w-7xl px-6 pb-20">
+    <section className="mx-auto max-w-7xl px-6 pb-20 reveal">
       <div className="rounded-3xl border border-warm-200 bg-white px-6 py-10 shadow-soft md:px-10 md:py-12">
         <p className="mb-8 text-[11px] uppercase tracking-[0.33em] text-caramel">My Design Approach</p>
         <div className="grid gap-4 md:grid-cols-5">
           {steps.map((step, idx) => {
             const Icon = step.icon;
             return (
-              <div key={step.title} className="relative rounded-2xl border border-warm-200 bg-warm-50 p-5">
+              <div key={step.title} className="relative rounded-2xl border border-warm-200 bg-warm-50 p-5 transition hover:-translate-y-1 hover:shadow-md">
                 {idx !== steps.length - 1 && <span className="absolute -right-2 top-8 hidden h-px w-4 bg-[#d7c8b2] md:block" />}
                 <div className="mb-4 flex items-center justify-between">
                   <Icon size={17} className="text-[#85603d]" />

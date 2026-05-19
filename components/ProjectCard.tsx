@@ -19,7 +19,7 @@ export default function ProjectCard({ project }: { project: Project }) {
   const mediaHeight = heightBySlug[project.slug] ?? 'h-72';
 
   return (
-    <Link href={`/projects/${project.slug}`} className="group block overflow-hidden rounded-2xl border border-warm-200 bg-white shadow-sm transition duration-500 hover:-translate-y-1.5 hover:shadow-soft">
+    <Link href={`/projects/${project.slug}`} className="group block overflow-hidden rounded-2xl border border-warm-200 bg-white shadow-sm transition duration-[350ms] hover:-translate-y-2 hover:shadow-soft reveal">
       <div className={`relative ${mediaHeight} overflow-hidden bg-[#e8dfd1]`}>
         <Image src={image} alt={`${project.title} project showcase`} fill className="object-cover transition duration-700 group-hover:scale-[1.04]" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-white/10 opacity-70" />

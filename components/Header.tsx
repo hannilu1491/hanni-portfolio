@@ -32,7 +32,7 @@ export default function Header() {
           </li>
           <li><Link href="/about" className="transition hover:text-caramel">About</Link></li>
           <li><Link href="/resume" className="transition hover:text-caramel">Resume</Link></li>
-          <li><Link href="/contact" className="transition hover:text-caramel">Contact</Link></li>
+          <li><Link href="/contact" className="transition hover:text-caramel">Contact</Link></li><li><Link href="/design-system" className="transition hover:text-caramel">Design System</Link></li>
           <li>
             <Link href="/contact" className="rounded bg-warm-900 px-4 py-2 text-xs uppercase tracking-[0.16em] text-white">Let’s Work Together</Link>
           </li>
