@@ -1,6 +1,7 @@
 import Hero from '@/components/Hero';
 import FeaturedProjects from '@/components/FeaturedProjects';
 import DesignApproach from '@/components/DesignApproach';
+import DesignSystemSection from '@/components/DesignSystemSection';
 import { projects } from '@/data/projects';
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <FeaturedProjects projects={featured} />
       <DesignApproach />
+      <DesignSystemSection />
     </main>
   );
 }

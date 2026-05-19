@@ -28,7 +28,7 @@ export default function ProjectCard({ project }: { project: Project }) {
         <p className="text-[11px] uppercase tracking-[0.26em] text-caramel">{project.category} · {project.year}</p>
         <h3 className="font-serif text-3xl leading-tight text-warm-900 transition group-hover:text-[#6f4a2f]">{project.title}</h3>
         <p className="text-sm leading-relaxed text-warm-700">{project.description}</p>
-        <p className="pt-2 text-xs uppercase tracking-[0.24em] text-warm-900">View Case Study →</p>
+        <p className="pt-2 text-xs uppercase tracking-[0.24em] text-warm-900"><span className="inline-block transition group-hover:translate-x-1">View Case Study →</span></p>
       </div>
     </Link>
   );
