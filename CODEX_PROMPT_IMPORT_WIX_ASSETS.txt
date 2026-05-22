@@ -1,0 +1,49 @@
+請直接修改目前 GitHub repository，不要建立新專案、不要產生 zip。
+
+我已經提供一包 Wix 舊作品集真實作品素材匯入工具，請依照以下方式處理：
+
+1. 請讀取：
+   - asset-manifest.json
+   - data/projects-wix-import-ready.ts
+   - public/images/projects/
+
+2. 如果 public/images/projects/ 內已有圖片，請直接使用。
+   如果尚未有圖片，請先提醒我執行：
+   node scripts/download-wix-assets.mjs
+
+3. 請將 data/projects-wix-import-ready.ts 的內容整合進現有 data/projects.ts。
+   不要保留舊的 placeholder project。
+
+4. Projects 頁面請顯示以下 5 個專案：
+   - UI/UX & Multimedia Design
+   - Logo & Business Card Design
+   - CIS / Brand Identity Design
+   - E-commerce & Social Media Design
+   - Illustration Design
+
+5. Featured Projects 請放：
+   - UI/UX & Multimedia Design
+   - CIS / Brand Identity Design
+   - E-commerce & Social Media Design
+
+6. 每個 project card 點進去要是完整 case study，而不是圖片列表。
+   每頁必須包含：
+   - Hero
+   - Overview
+   - Challenge
+   - Concept
+   - Visual System
+   - Process
+   - Final Showcase
+   - Outcome / Reflection
+
+7. 圖片路徑全部使用 /images/projects/... 裡的檔案。
+   不要再使用 placeholder、米色方塊或假 mockup。
+
+8. Header / Footer:
+   - 移除 Design System
+   - Email 改成 hanni6015@gmail.com
+   - 導覽列維持中英文高級品牌感
+
+9. Build:
+   請確認 npm run build 成功。
