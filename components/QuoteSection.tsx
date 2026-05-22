@@ -1,0 +1,1 @@
+export default function QuoteSection({ quote }: { quote: string }) { return <blockquote className="rounded-2xl border border-warm-200 bg-white p-8 font-serif text-3xl leading-tight">“{quote}”</blockquote>; }

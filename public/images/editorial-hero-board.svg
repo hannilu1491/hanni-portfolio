@@ -1,0 +1,26 @@
+<svg width="1400" height="980" viewBox="0 0 1400 980" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1400" height="980" fill="#EDE6DB"/>
+<rect x="40" y="58" width="510" height="360" rx="20" fill="#F7F3EC" stroke="#D8CCBA"/>
+<rect x="70" y="95" width="450" height="230" rx="12" fill="#191816"/>
+<rect x="90" y="118" width="180" height="186" rx="8" fill="#D4B185"/>
+<rect x="290" y="118" width="210" height="86" rx="8" fill="#EFE9DF"/>
+<rect x="290" y="218" width="210" height="86" rx="8" fill="#B08A61"/>
+<text x="90" y="350" fill="#302B24" font-size="24" font-family="Georgia">Brand Narrative Board</text>
+
+<g transform="translate(620,70) rotate(6)">
+  <rect width="520" height="760" rx="22" fill="#F9F6F0" stroke="#D8CCBA"/>
+  <rect x="30" y="34" width="460" height="250" rx="14" fill="#23211E"/>
+  <rect x="30" y="304" width="220" height="180" rx="12" fill="#E5D7C4"/>
+  <rect x="270" y="304" width="220" height="180" rx="12" fill="#C49A6A"/>
+  <rect x="30" y="504" width="460" height="220" rx="12" fill="#F0E8DC"/>
+  <text x="40" y="544" fill="#1E1B18" font-size="28" font-family="Georgia">Aesop-inspired Product Story</text>
+  <text x="40" y="580" fill="#5E5347" font-size="18" font-family="Arial">Editorial layout / web direction / product detail</text>
+</g>
+
+<g transform="translate(900,520) rotate(-8)">
+ <rect width="360" height="250" rx="18" fill="#F8F4EE" stroke="#D8CCBA"/>
+ <rect x="20" y="20" width="150" height="210" rx="12" fill="#C69A65"/>
+ <rect x="190" y="20" width="150" height="100" rx="12" fill="#1E1B17"/>
+ <rect x="190" y="130" width="150" height="100" rx="12" fill="#EAE1D4"/>
+</g>
+</svg>

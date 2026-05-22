@@ -1,0 +1,1 @@
+export default function ReflectionSection({ outcome, reflection }: { outcome?: string; reflection: string }) { return <div className="rounded-2xl border border-warm-200 bg-white p-6"><h3 className="font-serif text-2xl">Outcome / Reflection</h3><p className="mt-3 text-warm-700">{outcome}</p><p className="mt-3 text-warm-700">{reflection}</p></div>; }
