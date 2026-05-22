@@ -3,7 +3,11 @@ export type ProjectCategory =
   | 'Brand Experience'
   | 'Web Design'
   | 'Illustration'
-  | 'Experimental Lab';
+  | 'Experimental Lab'
+  | 'UI/UX Design'
+  | 'Branding'
+  | 'Packaging'
+  | 'Editorial / Visual System';
 
 export interface Project {
   title: string;
