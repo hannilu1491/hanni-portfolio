@@ -1,18 +1,18 @@
 import { Search, Grid2x2, Eye, Sparkles, Send } from 'lucide-react';
 
 const steps = [
-  { title: 'Research', desc: 'Understand users and uncover real needs.', icon: Search },
-  { title: 'Structure', desc: 'Shape clear information architecture and flow.', icon: Grid2x2 },
-  { title: 'Visual System', desc: 'Craft editorial layouts with intentional hierarchy.', icon: Eye },
-  { title: 'Interaction', desc: 'Design subtle moments that feel intuitive and refined.', icon: Sparkles },
-  { title: 'Delivery', desc: 'Polish details and ship experiences with impact.', icon: Send }
+  { title: 'Research 研究', desc: '理解使用者需求，找出真正的問題。', icon: Search },
+  { title: 'Structure 結構', desc: '整理資訊架構，建立清楚的使用流程。', icon: Grid2x2 },
+  { title: 'Visual System 視覺系統', desc: '建立一致的視覺語言與品牌感。', icon: Eye },
+  { title: 'Interaction 互動', desc: '設計直覺、細緻且有溫度的體驗。', icon: Sparkles },
+  { title: 'Delivery 交付', desc: '整理設計細節，讓成果能被理解與落地。', icon: Send }
 ];
 
 export default function DesignApproach() {
   return (
     <section className="mx-auto max-w-7xl px-6 pb-20 reveal">
       <div className="rounded-3xl border border-warm-200 bg-white px-6 py-10 shadow-soft md:px-10 md:py-12">
-        <p className="mb-8 text-[11px] uppercase tracking-[0.33em] text-caramel">My Design Approach</p>
+        <p className="mb-8 text-[11px] uppercase tracking-[0.33em] text-caramel">My Design Approach 我的設計方法</p>
         <div className="grid gap-4 md:grid-cols-5">
           {steps.map((step, idx) => {
             const Icon = step.icon;
