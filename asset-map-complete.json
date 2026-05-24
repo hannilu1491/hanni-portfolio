@@ -1,0 +1,57 @@
+{
+  "uiux-multimedia": {
+    "coverImage": "/images/projects/uiux-multimedia/uiux-multimedia-cover.svg",
+    "heroImage": "/images/projects/uiux-multimedia/uiux-multimedia-hero-banner.svg",
+    "galleryImages": [
+      "/images/projects/uiux-multimedia/uiux-multimedia-overview.svg",
+      "/images/projects/uiux-multimedia/uiux-multimedia-process.svg",
+      "/images/projects/uiux-multimedia/uiux-multimedia-visual-system.svg",
+      "/images/projects/uiux-multimedia/uiux-multimedia-final-showcase.svg",
+      "/images/projects/uiux-multimedia/uiux-multimedia-responsive.svg"
+    ]
+  },
+  "logo-business-card": {
+    "coverImage": "/images/projects/logo-business-card/logo-business-card-cover.svg",
+    "heroImage": "/images/projects/logo-business-card/logo-business-card-hero-banner.svg",
+    "galleryImages": [
+      "/images/projects/logo-business-card/logo-business-card-overview.svg",
+      "/images/projects/logo-business-card/logo-business-card-process.svg",
+      "/images/projects/logo-business-card/logo-business-card-visual-system.svg",
+      "/images/projects/logo-business-card/logo-business-card-final-showcase.svg",
+      "/images/projects/logo-business-card/logo-business-card-responsive.svg"
+    ]
+  },
+  "brand-identity": {
+    "coverImage": "/images/projects/brand-identity/brand-identity-cover.svg",
+    "heroImage": "/images/projects/brand-identity/brand-identity-hero-banner.svg",
+    "galleryImages": [
+      "/images/projects/brand-identity/brand-identity-overview.svg",
+      "/images/projects/brand-identity/brand-identity-process.svg",
+      "/images/projects/brand-identity/brand-identity-visual-system.svg",
+      "/images/projects/brand-identity/brand-identity-final-showcase.svg",
+      "/images/projects/brand-identity/brand-identity-responsive.svg"
+    ]
+  },
+  "ecommerce-social": {
+    "coverImage": "/images/projects/ecommerce-social/ecommerce-social-cover.svg",
+    "heroImage": "/images/projects/ecommerce-social/ecommerce-social-hero-banner.svg",
+    "galleryImages": [
+      "/images/projects/ecommerce-social/ecommerce-social-overview.svg",
+      "/images/projects/ecommerce-social/ecommerce-social-process.svg",
+      "/images/projects/ecommerce-social/ecommerce-social-visual-system.svg",
+      "/images/projects/ecommerce-social/ecommerce-social-final-showcase.svg",
+      "/images/projects/ecommerce-social/ecommerce-social-responsive.svg"
+    ]
+  },
+  "illustration": {
+    "coverImage": "/images/projects/illustration/illustration-cover.svg",
+    "heroImage": "/images/projects/illustration/illustration-hero-banner.svg",
+    "galleryImages": [
+      "/images/projects/illustration/illustration-overview.svg",
+      "/images/projects/illustration/illustration-process.svg",
+      "/images/projects/illustration/illustration-visual-system.svg",
+      "/images/projects/illustration/illustration-final-showcase.svg",
+      "/images/projects/illustration/illustration-responsive.svg"
+    ]
+  }
+}
