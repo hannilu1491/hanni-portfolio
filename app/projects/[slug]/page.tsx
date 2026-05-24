@@ -14,54 +14,41 @@ export default function Detail({ params }: { params: { slug: string } }) {
   const mainSlides = gallery.slice(0, 5);
 
   return (
-    <main className="bg-[#fcfbf8] pb-20">
+    <main className="bg-[#fcfbf8] pb-24">
       <CaseStudyHero project={p} />
 
-      <section className="mx-auto max-w-6xl px-6 py-14">
-        <div className="grid gap-10 md:grid-cols-2">
-          <div>
-            <h2 className="font-serif text-4xl leading-tight">{p.title}</h2>
-            <p className="mt-4 text-[11px] uppercase tracking-[0.28em] text-caramel">{p.category} · {p.year}</p>
-            <p className="mt-6 text-[1.02rem] leading-8 text-warm-800">{p.overview}</p>
+      <section className="mx-auto w-full max-w-[1100px] px-6 py-20">
+        <p className="text-[11px] uppercase tracking-[0.32em] text-caramel">{p.category} · {p.year}</p>
+        <h1 className="mt-4 font-serif text-5xl leading-[1.02] md:text-7xl">{p.title}</h1>
+
+        <div className="mt-8 flex flex-wrap gap-3">
+          <span className="inline-flex rounded-full border border-[#E8DED2] bg-[#f9f5ef] px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-warm-800">Role · {p.role}</span>
+          <span className="inline-flex rounded-full border border-[#E8DED2] bg-[#f9f5ef] px-4 py-2 text-[11px] uppercase tracking-[0.18em] text-warm-800">Tools · {p.tools.join(', ')}</span>
+        </div>
+
+        <p className="mt-8 max-w-3xl text-[1.03rem] leading-[1.85] text-warm-800">{p.overview}</p>
+      </section>
+
+      <section className="mx-auto w-full max-w-[1100px] px-6 pb-6">
+        <h2 className="font-serif text-4xl leading-tight md:text-5xl">Design Concept</h2>
+        <p className="mt-5 max-w-3xl text-lg leading-[1.85] text-warm-800">{p.concept || p.strategy}</p>
+      </section>
+
+      <PremiumShowcaseSlider images={mainSlides} />
+
+      <section className="mx-auto w-full max-w-[1100px] space-y-20 px-6">
+        {gallery.map((src, i) => (
+          <div key={src + i} className="relative block h-[62vw] max-h-[820px] min-h-[280px] w-full overflow-hidden">
+            <Image src={src} alt={`${p.title} visual showcase ${i + 1}`} fill className="object-contain" />
           </div>
-          <div className="space-y-4 text-warm-800">
-            <p><b>Role</b> · {p.role}</p><p><b>Tools</b> · {p.tools.join(', ')}</p>
-          </div>
-        </div>
+        ))}
       </section>
 
-      <section className="mx-auto max-w-4xl px-6 py-2">
-        <p className="text-[11px] uppercase tracking-[0.28em] text-caramel">Design Concept</p>
-        <p className="mt-4 text-lg leading-9 text-warm-800">{p.concept || p.strategy}</p>
-      </section>
-
-      <section className="mt-14">
-        <PremiumShowcaseSlider images={mainSlides} />
-      </section>
-
-      <section className="mx-auto mt-16 w-full max-w-[1400px] space-y-8 px-4 md:px-8">
-        <div className="relative block h-[60vw] max-h-[760px] min-h-[300px] w-full overflow-hidden">
-          <Image src={gallery[0]} alt={`${p.title} visual showcase 1`} fill className="object-contain" />
-        </div>
-
-        <div className="grid gap-8 md:grid-cols-2">
-          <div className="relative h-[52vw] max-h-[640px] min-h-[260px] overflow-hidden"><Image src={gallery[1] || gallery[0]} alt={`${p.title} visual showcase 2`} fill className="object-contain" /></div>
-          <div className="relative h-[52vw] max-h-[640px] min-h-[260px] overflow-hidden"><Image src={gallery[2] || gallery[0]} alt={`${p.title} visual showcase 3`} fill className="object-contain" /></div>
-        </div>
-
-        <div className="relative h-[60vw] max-h-[760px] min-h-[300px] overflow-hidden"><Image src={gallery[3] || gallery[0]} alt={`${p.title} visual showcase 4`} fill className="object-contain" /></div>
-
-        <div className="grid gap-8 md:grid-cols-[1.1fr_0.9fr] md:items-start">
-          <div className="relative h-[56vw] max-h-[700px] min-h-[280px] overflow-hidden"><Image src={gallery[4] || gallery[0]} alt={`${p.title} visual showcase 5`} fill className="object-contain" /></div>
-          <div className="relative h-[42vw] max-h-[520px] min-h-[220px] overflow-hidden md:mt-14"><Image src={gallery[5] || gallery[1] || gallery[0]} alt={`${p.title} visual showcase 6`} fill className="object-contain" /></div>
-        </div>
-      </section>
-
-      <section className="mx-auto mt-10 max-w-[1400px] px-4 md:px-8">
+      <section className="mx-auto mt-14 w-full max-w-[1100px] px-6">
         <ZoomableGallery images={gallery} />
       </section>
 
-      <section className="mx-auto mt-14 max-w-5xl px-6"><QuoteSection quote={p.strategy} /></section>
+      <section className="mx-auto mt-16 w-full max-w-[1100px] px-6"><QuoteSection quote={p.strategy} /></section>
     </main>
   );
 }
