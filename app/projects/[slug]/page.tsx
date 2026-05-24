@@ -40,9 +40,9 @@ export default function Detail({ params }: { params: { slug: string } }) {
       </section>
 
       <section className="mx-auto mt-16 w-full max-w-[1400px] space-y-8 px-4 md:px-8">
-        <button className="relative block h-[60vw] max-h-[760px] min-h-[300px] w-full overflow-hidden" onClick={() => {}}>
+        <div className="relative block h-[60vw] max-h-[760px] min-h-[300px] w-full overflow-hidden">
           <Image src={gallery[0]} alt={`${p.title} visual showcase 1`} fill className="object-contain" />
-        </button>
+        </div>
 
         <div className="grid gap-8 md:grid-cols-2">
           <div className="relative h-[52vw] max-h-[640px] min-h-[260px] overflow-hidden"><Image src={gallery[1] || gallery[0]} alt={`${p.title} visual showcase 2`} fill className="object-contain" /></div>
