@@ -85,3 +85,23 @@ sliderImages: [
   2. Update `sliderImages` paths in `data/projects.ts`
   3. Run `npm run dev` and verify
   4. Commit and push
+
+
+## Hero parallax assets (replaceable)
+Store hero assets in `public/images/hero/`:
+- `hero-bg-nature.jpg`
+- `hero-browser-frame.svg`
+- `hero-ui-screen-01.jpg`
+- `hero-ui-screen-02.jpg`
+- `floating-leaf-01.png`
+- `floating-leaf-02.png`
+- `floating-flower-01.png`
+- `floating-paper-card.png`
+- `floating-color-palette.png`
+- `foreground-plant-shadow.png`
+
+Hero asset paths are centralized in `data/hero-assets.ts` via `heroAssets`.
+- Replace natural floating elements: swap `public/images/hero/floating-*.png`
+- Replace main screen: swap `hero-ui-screen-01.jpg`
+- Replace background: swap `hero-bg-nature.jpg`
+- If an asset is missing, Hero falls back to built-in project images (no broken image block).
