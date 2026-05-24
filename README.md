@@ -60,3 +60,28 @@ public/images/projects/{slug}/
 
 ## Contact API
 Route: `POST /api/contact`
+
+
+## MacBook Slider maintenance
+- Component path: `components/MacBookSlider.tsx`
+- To adjust MacBook frame style, edit these classes inside `MacBookSlider`:
+  - outer frame: `frameClass` variable
+  - screen bezel: `rounded-[22px] border border-[#7f858f] bg-[#171a1f] p-[8px]`
+  - bottom deck/chin: `mx-auto mt-2 h-[10px] w-[45%] ...`
+- Wrapper component used in pages: `components/PremiumShowcaseSlider.tsx`.
+
+## How to replace slider images
+- Slider images come from `data/projects.ts` field `sliderImages` (fallback to `galleryImages`).
+- Example:
+```ts
+sliderImages: [
+  "/images/projects/uiux-multimedia/slider-01.jpg",
+  "/images/projects/uiux-multimedia/slider-02.jpg",
+  "/images/projects/uiux-multimedia/slider-03.jpg"
+]
+```
+- Replace flow:
+  1. Put new files into `public/images/projects/<slug>/`
+  2. Update `sliderImages` paths in `data/projects.ts`
+  3. Run `npm run dev` and verify
+  4. Commit and push

@@ -28,6 +28,7 @@ export const projects: Project[] = projectOrder
     coverImage: project.coverImage || fallbackImage,
     heroImage: project.heroImage || project.coverImage || fallbackImage,
     galleryImages: project.galleryImages?.length ? project.galleryImages : [project.coverImage || fallbackImage],
+    sliderImages: project.galleryImages?.length ? project.galleryImages.slice(0, 5) : [project.coverImage || fallbackImage],
     subProjects: ensureMinCards(project.galleryImages || [], project.title),
     goal: '建立完整作品敘事與可展示的品牌/數位設計成果，支援實際提案與作品集展示。',
     strategy: project.concept || '以一致的視覺語言與資訊分層，強化品牌辨識與體驗理解。',

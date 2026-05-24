@@ -11,7 +11,7 @@ export default function Detail({ params }: { params: { slug: string } }) {
   if (!p) return notFound();
 
   const gallery = p.galleryImages.length ? p.galleryImages : [p.heroImage];
-  const mainSlides = gallery.slice(0, 5);
+  const mainSlides = p.sliderImages?.length ? p.sliderImages : gallery.slice(0, 5);
 
   return (
     <main className="bg-[#fcfbf8] pb-24">

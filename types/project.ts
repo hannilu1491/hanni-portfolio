@@ -58,6 +58,7 @@ export interface Project {
   coverImage: string;
   heroImage: string;
   galleryImages: string[];
+  sliderImages?: string[];
   subProjects: SubProject[];
   figmaLink: string;
   prototypeLink: string;
