@@ -3,6 +3,24 @@
 import Image from 'next/image';
 import { useEffect, useMemo, useState } from 'react';
 import Button from './Button';
+import { heroAssets, HeroAssetItem } from '@/data/hero-assets';
+
+type Asset = HeroAssetItem;
+
+function useAssetSource(asset?: Asset) {
+  const fallback = '/images/hero/parallax/hero-main-browser-board.png';
+  const [src, setSrc] = useState(asset?.src || asset?.fallback || fallback);
+
+  useEffect(() => {
+    setSrc(asset?.src || asset?.fallback || fallback);
+  }, [asset?.src, asset?.fallback]);
+
+  return {
+    src,
+    hide: !asset?.src,
+    onError: () => setSrc(asset?.fallback || '')
+  };
+}
 
 const mainVisual = '/images/projects/uiux-multimedia/uiux-pet-hotel-showcase.avif';
 
@@ -66,6 +84,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-    </section>
+    </div></section>
   );
 }
