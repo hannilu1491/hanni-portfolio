@@ -6,6 +6,7 @@ export type ProjectCategory =
   | 'Experimental Lab'
   | 'UI/UX Design'
   | 'Branding'
+  | 'E-commerce Design'
   | 'Packaging'
   | 'Editorial / Visual System';
 

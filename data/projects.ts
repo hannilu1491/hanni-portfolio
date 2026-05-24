@@ -1,25 +1,76 @@
-import { Project } from '@/types/project';
+import { Project, ProjectCategory, ProjectSection } from '@/types/project';
+import { wixImportedProjects } from './projects-wix-import-ready';
 
-export const categories = ['All', 'UI/UX Design', 'Branding', 'Packaging', 'Illustration', 'Web Design'] as const;
+export const categories = ['All', 'UI/UX Design', 'Branding', 'E-commerce Design', 'Illustration'] as const;
 
-export const projects: Project[] = [
-  {
-    title: 'Aesora Brand Experience', slug: 'calm-finance-app', category: 'UI/UX Design', year: '2024', role: 'UI/UX & Web Designer', tools: ['Figma', 'Webflow', 'Photoshop'], tags: ['UI/UX & Multimedia Design', 'Web'], description: 'Premium brand experience website with editorial structure and warm visual storytelling.', overview: '以品牌敘事為核心的網站專案，整合產品展示、品牌語言與轉換流程。', challenge: '需要同時兼顧品牌形象與資訊可讀性，並讓使用者快速理解品牌價值。', goal: '建立高質感體驗、提升頁面停留與詢問轉換。', concept: 'Cinematic minimalism：以留白、節奏與焦點建立品牌氛圍。', visualSystem: '暖白底色、柔黑字、焦糖金點綴，搭配 serif 標題與規則化間距系統。', process: '從 sitemap、wireframe 到高保真視覺，逐步迭代首頁與關鍵轉換頁。', outcome: '完成可上線的品牌官網視覺系統與多裝置版型。', strategy: 'Editorial composition with modular sections and calm interaction pacing.', problem: '舊版資訊層級混亂，品牌語氣不一致。', userNeeds: ['快速理解品牌與服務。', '清楚看到產品與案例價值。', '在手機上也能順暢瀏覽。'], reflection: '我學到高級感網站其實來自於節奏與細節一致性。', coverImage: '/images/project-web.svg', heroImage: '/images/project-web.svg', galleryImages: ['/images/project-web.svg', '/images/project-brand.svg', '/images/editorial-hero-board.svg'], figmaLink: 'https://figma.com', prototypeLink: 'https://figma.com',
-    sections: [
-      { type: 'text-image', title: 'Project Overview 專案概覽', body: 'Client: Aesora SkinCare / Timeline: 2024 / Role: UI/UX & Visual Design', images: ['/images/project-brand.svg'] },
-      { type: 'quote-section', title: 'Design Concept 設計概念', body: '讓品牌語言與使用流程一致，建立有溫度且可轉換的數位體驗。' },
-      { type: 'editorial-gallery', title: 'Final Design Showcase 最終設計', images: ['/images/project-web.svg', '/images/project-ui.svg', '/images/editorial-hero-board.svg'] }
-    ]
-  },
-  {
-    title: 'Flow Studio Identity', slug: 'aesora-brand-experience', category: 'Branding', year: '2023', role: 'Brand Designer', tools: ['Illustrator', 'Photoshop', 'Figma'], tags: ['Logo & Business Card Design', 'CIS / Brand Identity Design'], description: 'Complete identity system including logo, business card, and visual collateral.', overview: '品牌識別專案，從 logo 到名片與應用規範，建立一致識別。', challenge: '在有限素材下建立可擴充的品牌語言。', goal: '打造可應用於線上線下的完整識別系統。', concept: 'Simple and tactile identity with elegant typography.', visualSystem: '黑白基底搭配金棕色、幾何對位與低飽和質感。', process: 'Logo sketches → identity directions → mockup validations.', outcome: '完成品牌識別與基礎應用手冊。', strategy: 'Reduce visual noise and emphasize memorable brand marks.', problem: '原本品牌風格分散，無統一識別。', userNeeds: ['辨識度高。', '延展性強。'], reflection: '好識別不只好看，還要在不同情境都穩定。', coverImage: '/images/project-brand.svg', heroImage: '/images/project-brand.svg', galleryImages: ['/images/project-brand.svg', '/images/project-web.svg', '/images/project-editorial.svg'], figmaLink: 'https://figma.com', prototypeLink: 'https://figma.com',
-    sections: [
-      { type: 'two-column-grid', title: 'Challenge 挑戰', body: '在商業識別與藝術感之間找到平衡，避免過度裝飾。', images: ['/images/project-brand.svg', '/images/project-editorial.svg'] },
-      { type: 'mockup-showcase', title: 'Visual System 視覺系統', body: 'Logo / Typography / Color / Stationery', images: ['/images/project-brand.svg', '/images/project-web.svg'] }
-    ]
-  },
-  {
-    title: 'Wumi Online Store', slug: 'nord-journal-design-lab', category: 'Web Design', year: '2023', role: 'E-commerce Designer', tools: ['Figma', 'Shopify', 'Photoshop'], tags: ['E-commerce & Social Media Design'], description: 'E-commerce and social campaign design focused on conversion and premium presentation.', overview: '電商網站與社群視覺整合，建立一致購物與品牌體驗。', challenge: '在促購資訊與品牌調性間保持平衡。', goal: '提升商品頁轉換與社群導流效果。', concept: 'Structured commerce with editorial product storytelling.', visualSystem: '卡片模組、視覺層級、產品特寫與暖色材質背景。', process: 'Mapping conversion journey → redesigning product and campaign modules.', outcome: '完成可重複應用的電商視覺模板。', strategy: 'Balance conversion modules with premium storytelling.', problem: '促銷資訊繁雜造成視覺壓力。', userNeeds: ['快速看到主打商品。', '購買流程簡單。'], reflection: '電商設計需要兼顧美感與商業效率。', coverImage: '/images/editorial-hero-board.svg', heroImage: '/images/editorial-hero-board.svg', galleryImages: ['/images/editorial-hero-board.svg', '/images/project-web.svg', '/images/project-ui.svg'], figmaLink: 'https://figma.com', prototypeLink: 'https://figma.com',
-    sections: [{ type: 'full-width-image', title: 'Final Design Showcase', images: ['/images/editorial-hero-board.svg'] }]
-  }
+const fallbackLinks = {
+  figmaLink: 'https://www.figma.com/',
+  prototypeLink: 'https://www.figma.com/'
+};
+
+const coverImageBySlug: Record<string, string> = {
+  'uiux-multimedia-design': '/images/projects/uiux-multimedia/uiux-pet-hotel-official-website.avif',
+  'logo-business-card-design': '/images/projects/logo-business-card/logo-business-card-grey-gold-deer.avif',
+  'cis-brand-identity-design': '/images/projects/brand-identity/brand-identity-corner-98-real-estate.avif',
+  'ecommerce-social-media-design': '/images/projects/ecommerce-social/ecommerce-gift-edm-design.avif',
+  'illustration-design': '/images/projects/illustration/illustration-postcard-series.avif'
+};
+
+const heroImageBySlug: Record<string, string> = {
+  'uiux-multimedia-design': '/images/projects/uiux-multimedia/uiux-pet-hotel-showcase.avif',
+  'logo-business-card-design': '/images/projects/logo-business-card/logo-business-card-grey-gold-deer.avif',
+  'cis-brand-identity-design': '/images/projects/brand-identity/brand-identity-corner-98-real-estate.avif',
+  'ecommerce-social-media-design': '/images/projects/ecommerce-social/ecommerce-product-detail-thermos.avif',
+  'illustration-design': '/images/projects/illustration/illustration-collage.avif'
+};
+
+const projectOrder = [
+  'uiux-multimedia-design',
+  'logo-business-card-design',
+  'cis-brand-identity-design',
+  'ecommerce-social-media-design',
+  'illustration-design'
 ];
+
+export const projects: Project[] = projectOrder
+  .map((slug) => wixImportedProjects.find((item) => item.slug === slug))
+  .filter((project): project is (typeof wixImportedProjects)[number] => Boolean(project))
+  .map((project): Project => ({
+    ...project,
+    sections: project.sections as ProjectSection[] | undefined,
+    category: project.category as ProjectCategory,
+    coverImage: coverImageBySlug[project.slug] || project.coverImage,
+    heroImage: heroImageBySlug[project.slug] || project.heroImage,
+    goal:
+      project.slug === 'uiux-multimedia-design'
+        ? '建立一個可直接對客展示的寵物旅館品牌官網體驗，強化服務信任感與預約意圖。'
+        : project.slug === 'logo-business-card-design'
+        ? '在短時間內輸出多組具有產業辨識度的品牌識別，並可落地於名片與商務情境。'
+        : project.slug === 'cis-brand-identity-design'
+        ? '打造具在地記憶點與一致延展性的房地產 CIS，支撐銷售與品牌溝通。'
+        : project.slug === 'ecommerce-social-media-design'
+        ? '優化促銷資訊與商品賣點呈現，提升活動點擊率與商品頁理解效率。'
+        : '建立可跨載體使用的插畫系列，兼顧角色辨識、敘事張力與商業應用彈性。',
+    strategy:
+      project.slug === 'uiux-multimedia-design'
+        ? '以內容分層 + 情境視覺雙軌策略，先解決「看懂服務」，再建立「想預約」的品牌感受。'
+        : project.slug === 'logo-business-card-design'
+        ? '採用「符號極簡化 + 色彩性格化」策略，讓每個品牌在小尺寸介面仍能被快速識別。'
+        : project.slug === 'cis-brand-identity-design'
+        ? '將街角地景語彙轉為識別主軸，透過高一致性的色彩與版式控制跨媒體品牌記憶。'
+        : project.slug === 'ecommerce-social-media-design'
+        ? '使用「賣點模組化 + 通路尺寸模板化」方法，兼顧大量素材產出與視覺一致性。'
+        : '以角色設定先行，建立可延展的圖像語法，讓單張作品與系列敘事彼此呼應。',
+    problem: project.challenge || '',
+    userNeeds:
+      project.slug === 'uiux-multimedia-design'
+        ? ['快速理解服務差異與流程。', '在手機與桌機皆能順暢瀏覽。', '透過視覺建立品牌信任。']
+        : project.slug === 'logo-business-card-design'
+        ? ['Logo 需要高辨識度。', '名片資訊需清楚且有質感。', '品牌風格能快速延展到其他物料。']
+        : project.slug === 'cis-brand-identity-design'
+        ? ['品牌要有在地連結與記憶點。', '銷售物料在不同尺寸維持一致。', '資訊可讀性與視覺吸引力並重。']
+        : project.slug === 'ecommerce-social-media-design'
+        ? ['第一眼看到促銷重點。', '快速掌握商品關鍵規格。', '在不同平台看到一致品牌語言。']
+        : ['角色有明確個性與表情語彙。', '作品可用於節慶與商業素材。', '系列圖像具有一致風格。'],
+    ...fallbackLinks
+  }));
