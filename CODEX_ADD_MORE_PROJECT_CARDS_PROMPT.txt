@@ -1,0 +1,55 @@
+請直接修改目前 repository，不要建立新專案。
+
+我已經補充一包「作品集擴充素材」，請讀取：
+
+- asset-map-expanded.json
+- public/images/hero/homepage-hero-banner.jpg
+- public/images/projects/**/*
+- data/project-add-template.ts
+
+請完成以下事情：
+
+1. 修正目前缺圖與錯誤圖片路徑：
+   - Hero 使用 /images/hero/homepage-hero-banner.jpg
+   - Project card 使用 asset-map-expanded.json 裡的 coverImage
+   - Project detail hero 使用 heroImage
+   - Project detail sections 使用 galleryImages
+
+2. 每個分類下面新增足夠的小卡片區塊：
+   - 每個大分類至少 4 張 sub project cards
+   - UI/UX & Multimedia Design: 4 張
+   - Logo & Business Card Design: 4 張
+   - CIS / Brand Identity Design: 4 張
+   - E-commerce & Social Media Design: 4 張
+   - Illustration Design: 4 張
+   這些小卡片先使用 asset-map-expanded.json 裡的 subProjectCards，讓我之後可以替換成自己的真實作品。
+
+3. Projects 頁面結構：
+   - 上方：Projects 作品
+   - 分類 filter
+   - 下面顯示五個大分類
+   - 每個大分類點進去後，detail page 裡要有「Sub Project Showcase / 子作品展示」區塊
+
+4. Project Detail Page：
+   每個作品詳情頁都要有：
+   - Hero Banner
+   - Overview
+   - Challenge
+   - Design Concept
+   - Visual System
+   - Process
+   - Final Showcase
+   - Responsive
+   - Sub Project Showcase 子作品展示
+   - Outcome / Reflection
+
+5. 請讓 data/projects.ts 支援 subProjects 欄位：
+   subProjects: [
+     { title, description, image, tags }
+   ]
+
+6. 請把 data/project-add-template.ts 的新增方式整理進 README，說明我以後如何新增作品。
+
+7. 所有破圖不能再出現；如果圖片載入失敗，請加 fallback image。
+
+8. npm run build 成功後發 PR。

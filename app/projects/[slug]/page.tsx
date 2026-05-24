@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 import { projects } from '@/data/projects';
 import CaseStudyHero from '@/components/CaseStudyHero';
 import CaseStudySection from '@/components/CaseStudySection';
