@@ -13,9 +13,9 @@ export default function ProjectCard({ project }: { project: Project }) {
   return (
     <Link
       href={`/projects/${project.slug}`}
-      className="group block overflow-hidden rounded-2xl border border-warm-200 bg-white shadow-sm transition duration-[350ms] hover:-translate-y-2 hover:shadow-[0_28px_52px_rgba(20,18,15,0.18)] reveal"
+      className="group block cursor-zoom-in overflow-hidden rounded-2xl border border-warm-200 bg-white shadow-sm transition duration-500 hover:-translate-y-2 hover:shadow-[0_30px_60px_rgba(20,18,15,0.2)] reveal"
     >
-      <div className="relative h-72 overflow-hidden bg-[#e8dfd1]">
+      <div className="relative aspect-[4/5] overflow-hidden bg-[#e8dfd1]">
         <Image
           src={src}
           alt={`${project.title} cover image`}
