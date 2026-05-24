@@ -6,6 +6,7 @@ import Button from './Button';
 
 export default function Hero() {
   const [scrollY, setScrollY] = useState(0);
+  const [heroSrc, setHeroSrc] = useState('/images/hero/homepage-hero-banner.jpg');
 
   useEffect(() => {
     const onScroll = () => setScrollY(window.scrollY);
@@ -18,7 +19,6 @@ export default function Hero() {
   const bgY = -(clamp / 360) * 20;
   const midY = -(clamp / 360) * 45;
   const fgY = -(clamp / 360) * 80;
-  const detailY = -(clamp / 360) * 120;
 
   return (
     <section className="fade-in bg-[#fcfbf8]">
@@ -40,25 +40,21 @@ export default function Hero() {
         <div className="relative h-[590px] md:h-[640px]">
           <div style={{ transform: `translateY(${bgY}px)` }} className="absolute inset-4 -z-10 rounded-[48px] bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.9),transparent_45%),radial-gradient(circle_at_80%_85%,rgba(200,169,106,0.15),transparent_38%)]" />
 
-          <figure style={{ transform: `translateY(${midY}px)` }} className="float-soft absolute left-0 top-10 z-10 w-[52%] -rotate-[7deg] shadow-[0_28px_54px_rgba(16,14,12,0.2)]">
-            <Image src="/images/project-web.svg" alt="desktop mockup" width={620} height={420} className="h-52 w-full rounded-2xl object-cover" priority />
+          <figure style={{ transform: `translateY(${midY}px)` }} className="float-soft absolute left-0 top-12 z-20 w-[70%] -rotate-[4deg] shadow-[0_28px_54px_rgba(16,14,12,0.2)]">
+            <Image
+              src={heroSrc}
+              alt="Hanni Lu portfolio hero banner"
+              width={960}
+              height={720}
+              className="h-[420px] w-full rounded-3xl object-cover"
+              priority
+              onError={() => setHeroSrc('/images/projects/uiux-multimedia/uiux-pet-hotel-showcase.avif')}
+            />
           </figure>
 
-          <figure style={{ transform: `translateY(${midY}px)` }} className="float-soft-delay absolute right-2 top-16 z-20 w-[48%] rotate-[6deg] scale-[0.98] shadow-[0_24px_48px_rgba(16,14,12,0.18)]">
-            <Image src="/images/project-brand.svg" alt="brand board" width={560} height={440} className="h-56 w-full rounded-2xl object-cover" />
+          <figure style={{ transform: `translateY(${fgY}px)` }} className="float-soft-delay absolute right-0 top-32 z-30 w-[45%] rotate-[7deg] shadow-[0_24px_48px_rgba(16,14,12,0.18)]">
+            <Image src="/images/projects/illustration/illustration-postcard-series.avif" alt="floating portfolio layer" width={560} height={440} className="h-56 w-full rounded-2xl object-cover" />
           </figure>
-
-          <figure style={{ transform: `translateY(${fgY}px)` }} className="absolute left-[17%] top-[44%] z-30 w-[66%] rotate-[-2deg] shadow-[0_30px_60px_rgba(16,14,12,0.24)]">
-            <Image src="/images/editorial-hero-board.svg" alt="ui card" width={920} height={620} className="h-56 w-full rounded-2xl object-cover" />
-          </figure>
-
-          <figure style={{ transform: `translateY(${fgY}px)` }} className="absolute bottom-8 right-6 z-40 w-[35%] rotate-[9deg] scale-[1.02] shadow-[0_22px_46px_rgba(16,14,12,0.2)]">
-            <Image src="/images/project-ui.svg" alt="mobile mockup" width={460} height={320} className="h-40 w-full rounded-2xl object-cover" />
-          </figure>
-
-          <div style={{ transform: `translateY(${detailY}px)` }} className="absolute left-6 top-[58%] z-50 h-2 w-2 rounded-full bg-caramel" />
-          <div style={{ transform: `translateY(${detailY}px)` }} className="absolute left-10 top-[59%] z-50 h-px w-20 bg-caramel/70" />
-          <p style={{ transform: `translateY(${detailY}px)` }} className="absolute left-10 top-[61%] z-50 text-[10px] uppercase tracking-[0.2em] text-warm-700">Editorial Motion Layer</p>
         </div>
       </div>
     </section>
