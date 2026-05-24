@@ -44,10 +44,6 @@ export default function Detail({ params }: { params: { slug: string } }) {
         ))}
       </section>
 
-      <section className="mx-auto mt-14 w-full max-w-[1100px] px-6">
-        <ZoomableGallery images={gallery} />
-      </section>
-
       <section className="mx-auto mt-16 w-full max-w-[1100px] px-6"><QuoteSection quote={p.strategy} /></section>
     </main>
   );
