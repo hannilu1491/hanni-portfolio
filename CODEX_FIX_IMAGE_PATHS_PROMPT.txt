@@ -1,0 +1,50 @@
+請直接修改目前 repository，不要建立新專案。
+
+我已經補齊每一個作品頁需要的圖片素材，並 push 到 GitHub 後請讀取：
+
+asset-map-complete.json
+public/images/projects/
+
+請修正目前圖片破圖與路徑錯誤問題。
+
+重點需求：
+
+1. 所有 project card 的圖片路徑必須改成 asset-map-complete.json 裡的 coverImage。
+2. 每個 project detail page 頂部必須先顯示對應 heroImage，作為首頁 banner / project hero banner。
+3. Project detail page 的 Final Design Showcase、Process、Visual System、Responsive 區塊必須使用對應 galleryImages。
+4. 不要再使用錯誤連結、破圖、alt 文字顯示。
+5. 每一頁都要有：
+   - hero banner
+   - project overview
+   - challenge / problem
+   - design concept
+   - visual system
+   - process
+   - final showcase
+   - responsive design
+   - quote / reflection
+6. 首頁 Hero 可使用：
+   /images/hero/home-hero-main.svg
+   並做 floating/parallax layer。
+7. Featured Projects 使用前三個作品：
+   - uiux-multimedia
+   - brand-identity
+   - ecommerce-social
+8. Projects 頁面顯示五個作品：
+   - uiux-multimedia
+   - logo-business-card
+   - brand-identity
+   - ecommerce-social
+   - illustration
+9. 圖片要使用 next/image 或 img 皆可，但路徑一定要正確。
+10. npm run build 成功後發 PR。
+
+請特別檢查：
+- /projects
+- /projects/uiux-multimedia-design
+- /projects/logo-business-card-design
+- /projects/cis-brand-identity-design
+- /projects/ecommerce-social-media-design
+- /projects/illustration-design
+
+這些頁面不可再破圖。
