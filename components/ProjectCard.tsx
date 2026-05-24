@@ -1,8 +1,15 @@
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { Project } from '@/types/project';
+import { useState } from 'react';
+
+const fallbackImage = '/images/projects/uiux-multimedia/uiux-pet-hotel-official-website.avif';
 
 export default function ProjectCard({ project }: { project: Project }) {
+  const [src, setSrc] = useState(project.coverImage || fallbackImage);
+
   return (
     <Link
       href={`/projects/${project.slug}`}
@@ -10,10 +17,11 @@ export default function ProjectCard({ project }: { project: Project }) {
     >
       <div className="relative h-72 overflow-hidden bg-[#e8dfd1]">
         <Image
-          src={project.coverImage}
+          src={src}
           alt={`${project.title} cover image`}
           fill
           className="object-cover transition duration-500 group-hover:scale-[1.04]"
+          onError={() => setSrc(fallbackImage)}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-white/10 opacity-70" />
       </div>

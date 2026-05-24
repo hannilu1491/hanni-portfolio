@@ -1,43 +1,57 @@
-// 新增作品範本：複製一筆到 data/projects.ts 的 projects array 裡，並替換內容與圖片路徑。
-export const projectTemplate = {
-  title: "New Project Title",
-  slug: "new-project-slug",
-  category: "Branding",
-  year: "2026",
-  role: "Visual Designer",
-  tools: ["Figma", "Illustrator", "Photoshop"],
-  tags: ["Branding", "Visual System"],
-  coverImage: "/images/projects/brand-identity/brand-identity-subcard-01.jpg",
-  heroImage: "/images/projects/brand-identity/brand-identity-hero-banner.jpg",
-  description: "一句話介紹這個作品。",
-  overview: "專案背景與內容。",
-  challenge: "遇到的問題或需求。",
-  goal: "設計目標。",
-  concept: "設計概念。",
-  visualSystem: "色彩、字體、版式、元件邏輯。",
-  process: "你的設計流程。",
-  outcome: "最後成果。",
-  reflection: "學到什麼、未來可優化什麼。",
+import { Project } from '@/types/project';
+
+export const projectAddTemplate: Project = {
+  title: 'New Project Title',
+  slug: 'new-project-slug',
+  category: 'UI/UX Design',
+  year: '2026',
+  role: 'Designer',
+  tools: ['Figma'],
+  tags: ['UI/UX'],
+  description: 'Short project description.',
+  overview: 'Overview content.',
+  challenge: 'Challenge content.',
+  goal: 'Goal content.',
+  concept: 'Design concept.',
+  visualSystem: 'Visual system notes.',
+  process: 'Process notes.',
+  outcome: 'Outcome summary.',
+  strategy: 'Strategy summary.',
+  problem: 'Problem definition.',
+  userNeeds: ['Need 1', 'Need 2', 'Need 3'],
+  reflection: 'Reflection content.',
+  coverImage: '/images/projects/path-to-cover.avif',
+  heroImage: '/images/projects/path-to-hero.avif',
   galleryImages: [
-    "/images/projects/brand-identity/brand-identity-overview.jpg",
-    "/images/projects/brand-identity/brand-identity-process.jpg",
-    "/images/projects/brand-identity/brand-identity-final-showcase.jpg"
+    '/images/projects/path-to-gallery-1.avif',
+    '/images/projects/path-to-gallery-2.avif'
   ],
-  sections: [
+  subProjects: [
     {
-      type: "text-image",
-      title: "Project Overview 專案概覽",
-      body: "這裡放專案簡介。",
-      images: ["/images/projects/brand-identity/brand-identity-overview.jpg"]
+      title: 'Sub Project Card 1',
+      description: 'Sub project description.',
+      image: '/images/projects/path-to-sub-1.avif',
+      tags: ['Tag A', 'Tag B']
     },
     {
-      type: "editorial-gallery",
-      title: "Final Showcase 最終展示",
-      body: "這裡放作品展示。",
-      images: [
-        "/images/projects/brand-identity/brand-identity-final-showcase.jpg",
-        "/images/projects/brand-identity/brand-identity-responsive.jpg"
-      ]
+      title: 'Sub Project Card 2',
+      description: 'Sub project description.',
+      image: '/images/projects/path-to-sub-2.avif',
+      tags: ['Tag A', 'Tag B']
+    },
+    {
+      title: 'Sub Project Card 3',
+      description: 'Sub project description.',
+      image: '/images/projects/path-to-sub-3.avif',
+      tags: ['Tag A', 'Tag B']
+    },
+    {
+      title: 'Sub Project Card 4',
+      description: 'Sub project description.',
+      image: '/images/projects/path-to-sub-4.avif',
+      tags: ['Tag A', 'Tag B']
     }
-  ]
+  ],
+  figmaLink: 'https://www.figma.com/',
+  prototypeLink: 'https://www.figma.com/'
 };

@@ -6,7 +6,7 @@ import Button from './Button';
 
 export default function Hero() {
   const [scrollY, setScrollY] = useState(0);
-  const [heroSrc, setHeroSrc] = useState('/images/hero/home-hero-main.svg');
+  const [heroSrc, setHeroSrc] = useState('/images/hero/homepage-hero-banner.jpg');
 
   useEffect(() => {
     const onScroll = () => setScrollY(window.scrollY);

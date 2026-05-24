@@ -28,6 +28,13 @@ export interface ProjectSection {
   images?: string[];
 }
 
+export interface SubProject {
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+}
+
 export interface Project {
   title: string;
   slug: string;
@@ -51,6 +58,7 @@ export interface Project {
   coverImage: string;
   heroImage: string;
   galleryImages: string[];
+  subProjects: SubProject[];
   figmaLink: string;
   prototypeLink: string;
   sections?: ProjectSection[];
