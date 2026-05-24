@@ -1,12 +1,19 @@
 import Hero from '@/components/Hero';
 import FeaturedProjects from '@/components/FeaturedProjects';
 import DesignApproach from '@/components/DesignApproach';
-import DesignSystemSection from '@/components/DesignSystemSection';
 import { projects } from '@/data/projects';
 import Link from 'next/link';
 
+const featuredOrder = [
+  'uiux-multimedia-design',
+  'cis-brand-identity-design',
+  'ecommerce-social-media-design'
+];
+
 export default function Home() {
-  const featured = projects.slice(0, 3);
+  const featured = featuredOrder
+    .map((slug) => projects.find((project) => project.slug === slug))
+    .filter((project): project is (typeof projects)[number] => Boolean(project));
 
   return (
     <main id="top" className="bg-[#fcfbf8] text-warm-900">
