@@ -2,26 +2,19 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Project } from '@/types/project';
 
-const imageBySlug: Record<string, string> = {
-  'calm-finance-app': '/images/project-ui.svg',
-  'aesora-brand-experience': '/images/project-brand.svg',
-  'nord-journal-design-lab': '/images/project-editorial.svg'
-};
-
-const heightBySlug: Record<string, string> = {
-  'calm-finance-app': 'h-80',
-  'aesora-brand-experience': 'h-72',
-  'nord-journal-design-lab': 'h-96'
-};
-
 export default function ProjectCard({ project }: { project: Project }) {
-  const image = imageBySlug[project.slug] ?? '/images/project-web.svg';
-  const mediaHeight = heightBySlug[project.slug] ?? 'h-72';
-
   return (
-    <Link href={`/projects/${project.slug}`} className="group block overflow-hidden rounded-2xl border border-warm-200 bg-white shadow-sm transition duration-[350ms] hover:-translate-y-2 hover:shadow-[0_28px_52px_rgba(20,18,15,0.18)] reveal">
-      <div className={`relative ${mediaHeight} overflow-hidden bg-[#e8dfd1]`}>
-        <Image src={image} alt={`${project.title} project showcase`} fill className="object-cover transition duration-500 group-hover:scale-[1.04]" />
+    <Link
+      href={`/projects/${project.slug}`}
+      className="group block overflow-hidden rounded-2xl border border-warm-200 bg-white shadow-sm transition duration-[350ms] hover:-translate-y-2 hover:shadow-[0_28px_52px_rgba(20,18,15,0.18)] reveal"
+    >
+      <div className="relative h-72 overflow-hidden bg-[#e8dfd1]">
+        <Image
+          src={project.coverImage}
+          alt={`${project.title} cover image`}
+          fill
+          className="object-cover transition duration-500 group-hover:scale-[1.04]"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-white/10 opacity-70" />
       </div>
       <div className="space-y-3 p-6">
