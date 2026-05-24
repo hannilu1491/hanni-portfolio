@@ -17,7 +17,8 @@ function useAssetSource(asset?: Asset) {
 
   return {
     src,
-    onError: () => setSrc(asset?.fallback || fallback)
+    hide: !asset?.src,
+    onError: () => setSrc(asset?.fallback || '')
   };
 }
 
@@ -45,8 +46,6 @@ export default function Hero() {
   const uiSecond = byKind('ui-secondary');
   const float1 = byKind('floating-card', 0);
   const float2 = byKind('floating-card', 1);
-  const nature1 = byKind('nature', 0);
-  const nature2 = byKind('nature', 1);
   const foreground = byKind('foreground');
 
   const bgSrc = useAssetSource(bg);
@@ -55,8 +54,6 @@ export default function Hero() {
   const secondSrc = useAssetSource(uiSecond);
   const f1 = useAssetSource(float1);
   const f2 = useAssetSource(float2);
-  const n1 = useAssetSource(nature1);
-  const n2 = useAssetSource(nature2);
   const fg = useAssetSource(foreground);
 
   const layer = useMemo(() => ({
@@ -70,16 +67,14 @@ export default function Hero() {
   return (
     <section className="fade-in bg-[#fcfbf8]"><div className="mx-auto grid max-w-7xl gap-10 px-6 pb-20 pt-16 md:grid-cols-[45%_55%] md:items-center">
       <div className="space-y-7"><p className="text-[11px] uppercase tracking-[0.34em] text-caramel">UI/UX Designer · Visual Storyteller</p><h1 className="font-serif text-6xl leading-[0.92] md:text-8xl">Hanni Lu<span className="text-gold">.</span></h1><p className="max-w-xl text-[1.05rem] leading-8 text-warm-700">Premium editorial digital experiences with natural atmosphere and refined visual storytelling.</p><div className="flex flex-wrap items-center gap-4"><Button href="/projects">View Projects 查看作品</Button><Button href="/contact" variant="ghost">Contact Me 聯絡我</Button></div></div>
-      <div className="relative h-[660px] overflow-hidden rounded-[36px] md:h-[700px]">
-        {bg?.src && <div style={layer.bg} className="absolute inset-0"><Image src={bgSrc.src} alt={bg.alt || ''} fill className="object-cover" onError={bgSrc.onError} /></div>}
+      <div className="relative h-[620px] overflow-hidden rounded-[36px] md:h-[680px]">
+        {!bgSrc.hide && bgSrc.src && <div style={layer.bg} className="absolute inset-0"><Image src={bgSrc.src} alt="" fill className="object-cover" onError={bgSrc.onError} /></div>}
         <div className="absolute inset-0 bg-gradient-to-tr from-[#f3ece2]/70 via-white/10 to-transparent" />
-        {uiMain?.src && <div style={layer.main} className="absolute left-[9%] top-[17%] w-[82%] rounded-[26px] border border-white/60 bg-white/45 p-3 shadow-[0_26px_52px_rgba(30,20,10,0.2)] backdrop-blur-[2px]"><div className="relative h-[390px] overflow-hidden rounded-[18px] border border-[#d8cec3] bg-[#fcfbf8] md:h-[420px]"><Image src={mainSrc.src} alt={uiMain.alt || ''} fill className="object-cover" onError={mainSrc.onError} />{frame?.src && <Image src={frameSrc.src} alt={frame.alt || ''} fill className="pointer-events-none object-contain" onError={frameSrc.onError} />}</div></div>}
-        {uiSecond?.src && <div style={layer.floatA} className="absolute bottom-[11%] right-[8%] hidden w-[34%] rounded-2xl border border-white/60 bg-white/70 p-2 shadow-soft md:block"><div className="relative h-28 overflow-hidden rounded-xl"><Image src={secondSrc.src} alt={uiSecond.alt || ''} fill className="object-cover" onError={secondSrc.onError} /></div></div>}
-        {float1?.src && <div style={layer.floatA} className="float-soft absolute right-[9%] top-[14%] h-28 w-24 overflow-hidden rounded-2xl shadow-soft"><Image src={f1.src} alt={float1.alt || ''} fill className="object-cover" onError={f1.onError} /></div>}
-        {float2?.src && <div style={layer.floatB} className="float-soft-delay absolute left-[6%] top-[64%] h-20 w-32 overflow-hidden rounded-xl shadow-soft"><Image src={f2.src} alt={float2.alt || ''} fill className="object-cover" onError={f2.onError} /></div>}
-        {nature1?.src && <div style={layer.floatA} className="absolute right-[27%] top-[72%] h-16 w-16 overflow-hidden rounded-full shadow-soft"><Image src={n1.src} alt={nature1.alt || ''} fill className="object-cover" onError={n1.onError} /></div>}
-        {nature2?.src && <div style={layer.floatB} className="absolute left-[3%] top-[26%] h-20 w-20 overflow-hidden rounded-full shadow-soft"><Image src={n2.src} alt={nature2.alt || ''} fill className="object-cover" onError={n2.onError} /></div>}
-        {foreground?.src && <div style={layer.front} className="absolute bottom-0 left-0 h-40 w-full opacity-70"><Image src={fg.src} alt={foreground.alt || ''} fill className="object-cover" onError={fg.onError} /></div>}
+        {!mainSrc.hide && mainSrc.src && <div style={layer.main} className="absolute left-[10%] top-[18%] w-[80%] rounded-[26px] border border-white/60 bg-white/45 p-3 shadow-[0_26px_52px_rgba(30,20,10,0.2)] backdrop-blur-[2px]"><div className="relative h-[360px] overflow-hidden rounded-[18px] border border-[#d8cec3] bg-[#fcfbf8] md:h-[400px]"><Image src={mainSrc.src} alt="" fill className="object-cover" onError={mainSrc.onError} />{!frameSrc.hide && frameSrc.src && <Image src={frameSrc.src} alt="" fill className="pointer-events-none object-contain" onError={frameSrc.onError} />}</div></div>}
+        {!secondSrc.hide && secondSrc.src && <div style={layer.floatA} className="absolute bottom-[12%] right-[8%] hidden w-[32%] rounded-2xl border border-white/60 bg-white/72 p-2 shadow-soft md:block"><div className="relative h-24 overflow-hidden rounded-xl"><Image src={secondSrc.src} alt="" fill className="object-cover" onError={secondSrc.onError} /></div></div>}
+        {!f1.hide && f1.src && <div style={layer.floatA} className="float-soft absolute right-[10%] top-[16%] h-24 w-20 overflow-hidden rounded-2xl shadow-soft"><Image src={f1.src} alt="" fill className="object-cover" onError={f1.onError} /></div>}
+        {!f2.hide && f2.src && <div style={layer.floatB} className="float-soft-delay absolute left-[8%] top-[66%] h-16 w-28 overflow-hidden rounded-xl shadow-soft"><Image src={f2.src} alt="" fill className="object-cover" onError={f2.onError} /></div>}
+        {!fg.hide && fg.src && <div style={layer.front} className="absolute bottom-0 left-0 h-36 w-full opacity-65"><Image src={fg.src} alt="" fill className="object-cover" onError={fg.onError} /></div>}
       </div>
     </div></section>
   );
