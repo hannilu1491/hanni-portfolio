@@ -1,0 +1,165 @@
+{
+  "uiux-multimedia": {
+    "coverImage": "/images/projects/uiux-multimedia/uiux-multimedia-cover.jpg",
+    "heroImage": "/images/projects/uiux-multimedia/uiux-multimedia-hero-banner.jpg",
+    "galleryImages": [
+      "/images/projects/uiux-multimedia/uiux-multimedia-overview.jpg",
+      "/images/projects/uiux-multimedia/uiux-multimedia-challenge.jpg",
+      "/images/projects/uiux-multimedia/uiux-multimedia-concept.jpg",
+      "/images/projects/uiux-multimedia/uiux-multimedia-visual-system.jpg",
+      "/images/projects/uiux-multimedia/uiux-multimedia-process.jpg",
+      "/images/projects/uiux-multimedia/uiux-multimedia-final-showcase.jpg",
+      "/images/projects/uiux-multimedia/uiux-multimedia-responsive.jpg",
+      "/images/projects/uiux-multimedia/uiux-multimedia-reflection.jpg"
+    ],
+    "subProjectCards": [
+      {
+        "title": "Pet Hotel Website",
+        "image": "/images/projects/uiux-multimedia/uiux-multimedia-subcard-01.jpg"
+      },
+      {
+        "title": "Landing Page UI",
+        "image": "/images/projects/uiux-multimedia/uiux-multimedia-subcard-02.jpg"
+      },
+      {
+        "title": "Mobile UI Flow",
+        "image": "/images/projects/uiux-multimedia/uiux-multimedia-subcard-03.jpg"
+      },
+      {
+        "title": "Service Overview",
+        "image": "/images/projects/uiux-multimedia/uiux-multimedia-subcard-04.jpg"
+      }
+    ]
+  },
+  "logo-business-card": {
+    "coverImage": "/images/projects/logo-business-card/logo-business-card-cover.jpg",
+    "heroImage": "/images/projects/logo-business-card/logo-business-card-hero-banner.jpg",
+    "galleryImages": [
+      "/images/projects/logo-business-card/logo-business-card-overview.jpg",
+      "/images/projects/logo-business-card/logo-business-card-challenge.jpg",
+      "/images/projects/logo-business-card/logo-business-card-concept.jpg",
+      "/images/projects/logo-business-card/logo-business-card-visual-system.jpg",
+      "/images/projects/logo-business-card/logo-business-card-process.jpg",
+      "/images/projects/logo-business-card/logo-business-card-final-showcase.jpg",
+      "/images/projects/logo-business-card/logo-business-card-responsive.jpg",
+      "/images/projects/logo-business-card/logo-business-card-reflection.jpg"
+    ],
+    "subProjectCards": [
+      {
+        "title": "Logo Mark Set",
+        "image": "/images/projects/logo-business-card/logo-business-card-subcard-01.jpg"
+      },
+      {
+        "title": "Business Card Mockup",
+        "image": "/images/projects/logo-business-card/logo-business-card-subcard-02.jpg"
+      },
+      {
+        "title": "Identity Basics",
+        "image": "/images/projects/logo-business-card/logo-business-card-subcard-03.jpg"
+      },
+      {
+        "title": "Stationery",
+        "image": "/images/projects/logo-business-card/logo-business-card-subcard-04.jpg"
+      }
+    ]
+  },
+  "brand-identity": {
+    "coverImage": "/images/projects/brand-identity/brand-identity-cover.jpg",
+    "heroImage": "/images/projects/brand-identity/brand-identity-hero-banner.jpg",
+    "galleryImages": [
+      "/images/projects/brand-identity/brand-identity-overview.jpg",
+      "/images/projects/brand-identity/brand-identity-challenge.jpg",
+      "/images/projects/brand-identity/brand-identity-concept.jpg",
+      "/images/projects/brand-identity/brand-identity-visual-system.jpg",
+      "/images/projects/brand-identity/brand-identity-process.jpg",
+      "/images/projects/brand-identity/brand-identity-final-showcase.jpg",
+      "/images/projects/brand-identity/brand-identity-responsive.jpg",
+      "/images/projects/brand-identity/brand-identity-reflection.jpg"
+    ],
+    "subProjectCards": [
+      {
+        "title": "Real Estate CIS",
+        "image": "/images/projects/brand-identity/brand-identity-subcard-01.jpg"
+      },
+      {
+        "title": "Brand Board",
+        "image": "/images/projects/brand-identity/brand-identity-subcard-02.jpg"
+      },
+      {
+        "title": "Signage System",
+        "image": "/images/projects/brand-identity/brand-identity-subcard-03.jpg"
+      },
+      {
+        "title": "Print Collateral",
+        "image": "/images/projects/brand-identity/brand-identity-subcard-04.jpg"
+      }
+    ]
+  },
+  "ecommerce-social": {
+    "coverImage": "/images/projects/ecommerce-social/ecommerce-social-cover.jpg",
+    "heroImage": "/images/projects/ecommerce-social/ecommerce-social-hero-banner.jpg",
+    "galleryImages": [
+      "/images/projects/ecommerce-social/ecommerce-social-overview.jpg",
+      "/images/projects/ecommerce-social/ecommerce-social-challenge.jpg",
+      "/images/projects/ecommerce-social/ecommerce-social-concept.jpg",
+      "/images/projects/ecommerce-social/ecommerce-social-visual-system.jpg",
+      "/images/projects/ecommerce-social/ecommerce-social-process.jpg",
+      "/images/projects/ecommerce-social/ecommerce-social-final-showcase.jpg",
+      "/images/projects/ecommerce-social/ecommerce-social-responsive.jpg",
+      "/images/projects/ecommerce-social/ecommerce-social-reflection.jpg"
+    ],
+    "subProjectCards": [
+      {
+        "title": "EDM Campaign",
+        "image": "/images/projects/ecommerce-social/ecommerce-social-subcard-01.jpg"
+      },
+      {
+        "title": "Product Page",
+        "image": "/images/projects/ecommerce-social/ecommerce-social-subcard-02.jpg"
+      },
+      {
+        "title": "Social Banner",
+        "image": "/images/projects/ecommerce-social/ecommerce-social-subcard-03.jpg"
+      },
+      {
+        "title": "Marketplace Visual",
+        "image": "/images/projects/ecommerce-social/ecommerce-social-subcard-04.jpg"
+      }
+    ]
+  },
+  "illustration": {
+    "coverImage": "/images/projects/illustration/illustration-cover.jpg",
+    "heroImage": "/images/projects/illustration/illustration-hero-banner.jpg",
+    "galleryImages": [
+      "/images/projects/illustration/illustration-overview.jpg",
+      "/images/projects/illustration/illustration-challenge.jpg",
+      "/images/projects/illustration/illustration-concept.jpg",
+      "/images/projects/illustration/illustration-visual-system.jpg",
+      "/images/projects/illustration/illustration-process.jpg",
+      "/images/projects/illustration/illustration-final-showcase.jpg",
+      "/images/projects/illustration/illustration-responsive.jpg",
+      "/images/projects/illustration/illustration-reflection.jpg"
+    ],
+    "subProjectCards": [
+      {
+        "title": "Postcard Series",
+        "image": "/images/projects/illustration/illustration-subcard-01.jpg"
+      },
+      {
+        "title": "Character Design",
+        "image": "/images/projects/illustration/illustration-subcard-02.jpg"
+      },
+      {
+        "title": "Seasonal Illustration",
+        "image": "/images/projects/illustration/illustration-subcard-03.jpg"
+      },
+      {
+        "title": "Editorial Art",
+        "image": "/images/projects/illustration/illustration-subcard-04.jpg"
+      }
+    ]
+  },
+  "homepage": {
+    "hero": "/images/hero/homepage-hero-banner.jpg"
+  }
+}
