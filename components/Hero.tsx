@@ -5,13 +5,15 @@ import { useEffect, useMemo, useState } from 'react';
 import Button from './Button';
 import { heroAssets, HeroAssetItem } from '@/data/hero-assets';
 
-function useAssetSource(asset?: HeroAssetItem) {
-  const fallback = '/images/projects/uiux-multimedia/uiux-pet-hotel-showcase.avif';
-  const [src, setSrc] = useState(asset?.src || fallback);
+type Asset = HeroAssetItem;
+
+function useAssetSource(asset?: Asset) {
+  const fallback = '/images/hero/parallax/hero-main-browser-board.png';
+  const [src, setSrc] = useState(asset?.src || asset?.fallback || fallback);
 
   useEffect(() => {
-    setSrc(asset?.src || fallback);
-  }, [asset?.src]);
+    setSrc(asset?.src || asset?.fallback || fallback);
+  }, [asset?.src, asset?.fallback]);
 
   return {
     src,
@@ -34,8 +36,8 @@ export default function Hero() {
     };
   }, []);
 
-  const safeAssets = heroAssets.filter(Boolean).filter((asset) => asset?.src);
-  const byKind = (kind: HeroAssetItem['kind'], idx = 0) => safeAssets.filter((a) => a.kind === kind)[idx];
+  const safeHeroAssets = heroAssets.filter((asset): asset is Asset => Boolean(asset && asset.src));
+  const byKind = (kind: Asset['kind'], idx = 0) => safeHeroAssets.filter((a) => a.kind === kind)[idx];
 
   const bg = byKind('background');
   const frame = byKind('browser-frame');
