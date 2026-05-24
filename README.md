@@ -100,7 +100,7 @@ Store hero assets in `public/images/hero/`:
 - `floating-color-palette.png`
 - `foreground-plant-shadow.png`
 
-Hero asset paths are centralized in `data/hero-assets.ts` via `heroAssets`.
+Hero asset paths are centralized in `data/hero-assets.ts` via `heroAssets` array.
 - Replace natural floating elements: swap `public/images/hero/floating-*.png`
 - Replace main screen: swap `hero-ui-screen-01.jpg`
 - Replace background: swap `hero-bg-nature.jpg`
