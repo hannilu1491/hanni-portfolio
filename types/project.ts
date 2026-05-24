@@ -6,6 +6,7 @@ export type ProjectCategory =
   | 'Experimental Lab'
   | 'UI/UX Design'
   | 'Branding'
+  | 'E-commerce Design'
   | 'Packaging'
   | 'Editorial / Visual System';
 
@@ -25,6 +26,13 @@ export interface ProjectSection {
   subtitle?: string;
   body?: string;
   images?: string[];
+}
+
+export interface SubProject {
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
 }
 
 export interface Project {
@@ -50,6 +58,7 @@ export interface Project {
   coverImage: string;
   heroImage: string;
   galleryImages: string[];
+  subProjects: SubProject[];
   figmaLink: string;
   prototypeLink: string;
   sections?: ProjectSection[];
