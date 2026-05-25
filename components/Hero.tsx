@@ -38,7 +38,7 @@ export default function Hero() {
           100% { transform: translate3d(10px, -32px, 0); opacity: 0.25; }
         }
         .hero-island-size {
-          width: clamp(820px, 72vw, 1280px);
+          width: clamp(760px, 62vw, 1120px);
           height: auto;
         }
         .glass-reveal {
@@ -143,7 +143,7 @@ export default function Hero() {
             width={980}
             height={920}
             priority
-            className="island-float pointer-events-none absolute right-[-10vw] top-[18%] z-[2] h-auto object-contain hero-island-size"
+            className="island-float pointer-events-none absolute right-[-4vw] top-[24%] z-[2] h-auto object-contain hero-island-size"
             style={{ filter: "drop-shadow(0 48px 80px rgba(40, 30, 20, 0.22))" }}
             onError={() => {
               if (islandSrc !== fallbackHeroImage) setIslandSrc(fallbackHeroImage);
@@ -151,12 +151,12 @@ export default function Hero() {
           />
 
           <div
-            className={`glass-reveal absolute right-[8vw] top-[26%] z-[6] w-[180px] rounded-[22px] p-[18px] text-[#2d2b28] ${
+            className={`glass-reveal absolute right-[13vw] top-[28%] z-[6] w-[190px] rounded-[22px] p-[18px] text-[#2d2b28] ${
               ready ? "translate-y-0 opacity-100 blur-0" : "translate-y-5 opacity-0 blur-[8px]"
             }`}
             style={{
               transitionDelay: "0.58s",
-              background: "rgba(255,255,255,0.16)",
+              background: "rgba(255,255,255,0.18)",
               backdropFilter: "blur(18px)",
               WebkitBackdropFilter: "blur(18px)",
               border: "1px solid rgba(255,255,255,0.28)",
@@ -165,17 +165,17 @@ export default function Hero() {
             }}
           >
             <p className="text-[28px] leading-none">↗</p>
-            <p className="mt-2 text-base">Branding</p>
-            <p className="mt-1 text-xs leading-5 text-[#4a4844]">Emotional visual identity.</p>
+            <p className="mt-2 text-[15px]">Branding</p>
+            <p className="mt-1 text-[13px] leading-[1.5] text-[#4a4844]">Emotional visual identity.</p>
           </div>
 
           <div
-            className={`glass-reveal absolute right-[5vw] top-[45%] z-[6] w-[180px] rounded-[22px] p-[18px] text-[#2d2b28] ${
+            className={`glass-reveal absolute right-[9vw] top-[45%] z-[6] w-[190px] rounded-[22px] p-[18px] text-[#2d2b28] ${
               ready ? "translate-y-0 opacity-100 blur-0" : "translate-y-5 opacity-0 blur-[8px]"
             }`}
             style={{
               transitionDelay: "0.7s",
-              background: "rgba(255,255,255,0.16)",
+              background: "rgba(255,255,255,0.18)",
               backdropFilter: "blur(18px)",
               WebkitBackdropFilter: "blur(18px)",
               border: "1px solid rgba(255,255,255,0.28)",
@@ -184,9 +184,11 @@ export default function Hero() {
             }}
           >
             <p className="text-[28px] leading-none">↗</p>
-            <p className="mt-2 text-base">UI/UX Design</p>
-            <p className="mt-1 text-xs leading-5 text-[#4a4844]">Intuitive digital experiences.</p>
+            <p className="mt-2 text-[15px]">UI/UX Design</p>
+            <p className="mt-1 text-[13px] leading-[1.5] text-[#4a4844]">Intuitive digital experiences.</p>
           </div>
+        </div>
+
         </div>
 
         </div>
