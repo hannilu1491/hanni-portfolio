@@ -4,11 +4,13 @@ import FallbackImage from "./FallbackImage";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const primaryHeroImage = "/images/projects/uiux-multimedia/uiux-multimedia-hero-banner.jpg";
+const heroCloudBg = "/images/hero/hero-cloud-bg.png";
+const heroIsland = "/images/hero/hero-floating-island.png";
 const fallbackHeroImage = "/images/hero/homepage-hero-banner.jpg";
 
 export default function Hero() {
-  const [imageSrc, setImageSrc] = useState(primaryHeroImage);
+  const [bgSrc, setBgSrc] = useState(heroCloudBg);
+  const [islandSrc, setIslandSrc] = useState(heroIsland);
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
@@ -19,13 +21,6 @@ export default function Hero() {
   return (
     <section className="hero-luxury fade-in bg-[#f8f5f1]">
       <style jsx>{`
-        .hero-banner-float {
-          animation: slowFloat 8s ease-in-out infinite alternate;
-        }
-        @keyframes slowFloat {
-          0% { transform: translate3d(0, 0, 0); }
-          100% { transform: translate3d(0, -10px, 0); }
-        }
         .hero-reveal {
           transition-property: opacity, transform, filter;
           transition-duration: 900ms;
@@ -105,44 +100,57 @@ export default function Hero() {
         </div>
 
         <div
-          className={`hero-banner-float hero-reveal relative h-[820px] transition-all duration-[900ms] ${
+          className={`hero-reveal relative h-[720px] overflow-visible transition-all duration-[900ms] md:h-[720px] ${
             ready ? "translate-y-0 scale-100 opacity-100 blur-0" : "translate-y-7 scale-[0.98] opacity-0 blur-sm"
           }`}
           style={{ transitionDelay: "0.42s" }}
         >
-          <div className="pointer-events-none absolute -left-12 top-[16%] h-[180px] w-[180px] rounded-full bg-[#f1e6d6]/70 blur-[56px]" />
-          <div className="pointer-events-none absolute -right-16 bottom-10 h-[220px] w-[220px] rounded-full bg-[#e5d7c3]/65 blur-[64px]" />
-          <div
-            className="relative -right-[4vw] h-full w-[calc(100%+4vw)] rounded-[40px] bg-[#f5efe7] p-8 shadow-[0_52px_120px_rgba(27,23,18,0.15),0_0_95px_rgba(232,219,199,0.62)]"
-          >
-            <div className="pointer-events-none absolute inset-0 rounded-[40px] bg-[radial-gradient(circle_at_64%_44%,rgba(255,255,255,0.78),rgba(244,235,224,0.62)_42%,rgba(232,221,205,0.46)_72%,rgba(220,205,186,0.36)_100%)]" />
-            <div className="pointer-events-none absolute inset-x-6 bottom-8 top-10 rounded-[34px] bg-[radial-gradient(circle_at_52%_65%,rgba(198,182,159,0.22),transparent_66%)] blur-xl" />
+          <div className="pointer-events-none absolute -left-8 top-[18%] h-[200px] w-[200px] rounded-full bg-[#f1e6d6]/65 blur-[64px]" />
+          <div className="pointer-events-none absolute -right-14 bottom-[7%] h-[240px] w-[240px] rounded-full bg-[#e5d7c3]/60 blur-[72px]" />
+          <div className="relative h-full w-full overflow-visible md:-right-[4vw] md:w-[calc(100%+4vw)]">
+            <div className="absolute inset-0 rounded-[40px] bg-[radial-gradient(circle_at_64%_44%,rgba(255,255,255,0.76),rgba(244,235,224,0.6)_42%,rgba(232,221,205,0.42)_72%,rgba(220,205,186,0.32)_100%)]" />
+            <div className="absolute inset-0 rounded-[40px] bg-[radial-gradient(circle_at_30%_70%,rgba(205,190,167,0.24),transparent_62%)] blur-lg" />
+
             <FallbackImage
-              src={imageSrc}
+              src={bgSrc}
               alt=""
-              width={1500}
-              height={1240}
+              width={1400}
+              height={720}
               priority
-              className="h-full w-full object-contain transition duration-[900ms] hover:scale-[1.02]"
-              style={{ objectPosition: "60% center" }}
+              className="absolute inset-0 h-full w-full rounded-[40px] object-cover opacity-90"
               onError={() => {
-                if (imageSrc !== fallbackHeroImage) {
-                  setImageSrc(fallbackHeroImage);
+                if (bgSrc !== fallbackHeroImage) {
+                  setBgSrc(fallbackHeroImage);
                 }
               }}
             />
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#efe3d1] via-transparent to-[#e7d8c5] opacity-10" />
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_68%_38%,rgba(255,255,255,0.36),transparent_56%)]" />
-            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_24%_74%,rgba(220,206,184,0.28),transparent_52%)]" />
-            <div className="pointer-events-none absolute inset-0 shadow-[inset_0_-100px_130px_rgba(24,20,16,0.11)]" />
+
+            <FallbackImage
+              src={islandSrc}
+              alt=""
+              width={920}
+              height={860}
+              priority
+              className="island-float absolute right-0 top-[8%] z-[2] h-auto w-[100%] object-contain md:right-[-4vw] md:w-[88%] md:max-w-[920px]"
+              style={{ filter: "drop-shadow(0 48px 80px rgba(40, 30, 20, 0.22))" }}
+              onError={() => {
+                if (islandSrc !== fallbackHeroImage) {
+                  setIslandSrc(fallbackHeroImage);
+                }
+              }}
+            />
+
+            <div className="pointer-events-none absolute inset-0 rounded-[40px] bg-gradient-to-br from-[#efe3d1] via-transparent to-[#e7d8c5] opacity-10" />
+            <div className="pointer-events-none absolute inset-0 rounded-[40px] bg-[radial-gradient(circle_at_68%_38%,rgba(255,255,255,0.32),transparent_56%)]" />
+            <div className="pointer-events-none absolute inset-0 rounded-[40px] shadow-[inset_0_-100px_130px_rgba(24,20,16,0.11)]" />
             <div className="hero-motion-layer pointer-events-none absolute inset-0" />
 
-            <div className="absolute right-7 top-10 w-[170px] rounded-[22px] border border-white/30 bg-white/18 p-4 text-[#2b2a28] shadow-[0_20px_60px_rgba(0,0,0,0.08)] backdrop-blur-2xl transition duration-500 hover:-translate-y-1">
+            <div className="glass-float-card absolute right-2 top-[12%] z-[3] w-[160px] rounded-[22px] p-4 text-[#2b2a28] transition duration-500 hover:-translate-y-1 md:right-[-2vw] md:w-[170px]">
               <p className="text-base">Branding</p>
               <p className="mt-2 text-sm leading-6 text-[#4b4a47]">Emotional and refined brand experiences.</p>
             </div>
 
-            <div className="absolute bottom-10 right-8 w-[190px] rounded-[22px] border border-white/30 bg-white/18 p-4 text-[#2b2a28] shadow-[0_20px_60px_rgba(0,0,0,0.08)] backdrop-blur-2xl transition duration-500 hover:-translate-y-1">
+            <div className="glass-float-card absolute bottom-[10%] right-3 z-[3] w-[180px] rounded-[22px] p-4 text-[#2b2a28] transition duration-500 hover:-translate-y-1 md:right-[-1.5vw] md:w-[190px]">
               <p className="text-base">UI/UX Design</p>
               <p className="mt-2 text-sm leading-6 text-[#4b4a47]">Intuitive digital journeys with calm luxury aesthetics.</p>
             </div>
