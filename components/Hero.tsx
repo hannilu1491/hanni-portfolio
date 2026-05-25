@@ -38,7 +38,7 @@ export default function Hero() {
           100% { transform: translate3d(10px, -32px, 0); opacity: 0.25; }
         }
         .hero-island-size {
-          width: clamp(760px, 68vw, 1180px);
+          width: clamp(820px, 72vw, 1280px);
           height: auto;
         }
         .glass-reveal {
@@ -97,7 +97,7 @@ export default function Hero() {
           </p>
 
           <h1
-            className={`hero-reveal font-serif text-[62px] font-normal leading-[0.9] tracking-[-0.038em] text-[#111111] md:text-[96px] lg:text-[114px] ${
+            className={`hero-reveal font-serif text-[62px] font-normal leading-[0.9] tracking-[-0.038em] text-[#111111] md:text-[96px] lg:text-[96px] ${
               ready ? "translate-y-0 opacity-100 blur-0" : "translate-y-6 opacity-0 blur-sm"
             }`}
             style={{ transitionDelay: "0.12s" }}
@@ -143,7 +143,7 @@ export default function Hero() {
             width={980}
             height={920}
             priority
-            className="island-float pointer-events-none absolute right-[-6vw] top-[8%] z-[2] h-auto object-contain hero-island-size"
+            className="island-float pointer-events-none absolute right-[-10vw] top-[18%] z-[2] h-auto object-contain hero-island-size"
             style={{ filter: "drop-shadow(0 48px 80px rgba(40, 30, 20, 0.22))" }}
             onError={() => {
               if (islandSrc !== fallbackHeroImage) setIslandSrc(fallbackHeroImage);
@@ -151,58 +151,44 @@ export default function Hero() {
           />
 
           <div
-            className={`glass-reveal absolute right-0 top-[16%] z-[6] w-[210px] rounded-3xl p-5 text-[#2d2b28] ${
+            className={`glass-reveal absolute right-[8vw] top-[26%] z-[6] w-[180px] rounded-[22px] p-[18px] text-[#2d2b28] ${
               ready ? "translate-y-0 opacity-100 blur-0" : "translate-y-5 opacity-0 blur-[8px]"
             }`}
             style={{
               transitionDelay: "0.58s",
-              background: "rgba(255,255,255,0.22)",
-              backdropFilter: "blur(24px)",
-              WebkitBackdropFilter: "blur(24px)",
-              border: "1px solid rgba(255,255,255,0.35)",
-              boxShadow: "0 24px 80px rgba(30, 24, 18, 0.10)"
+              background: "rgba(255,255,255,0.16)",
+              backdropFilter: "blur(18px)",
+              WebkitBackdropFilter: "blur(18px)",
+              border: "1px solid rgba(255,255,255,0.28)",
+              boxShadow: "0 18px 50px rgba(30, 24, 18, 0.08)",
+              opacity: 0.82
             }}
           >
             <p className="text-[28px] leading-none">↗</p>
-            <p className="mt-2 text-lg">Branding</p>
-            <p className="mt-2 text-sm leading-6 text-[#4a4844]">Emotional visual identity.</p>
+            <p className="mt-2 text-base">Branding</p>
+            <p className="mt-1 text-xs leading-5 text-[#4a4844]">Emotional visual identity.</p>
           </div>
 
           <div
-            className={`glass-reveal absolute right-[1%] top-[42%] z-[6] w-[220px] rounded-3xl p-5 text-[#2d2b28] ${
+            className={`glass-reveal absolute right-[5vw] top-[45%] z-[6] w-[180px] rounded-[22px] p-[18px] text-[#2d2b28] ${
               ready ? "translate-y-0 opacity-100 blur-0" : "translate-y-5 opacity-0 blur-[8px]"
             }`}
             style={{
               transitionDelay: "0.7s",
-              background: "rgba(255,255,255,0.22)",
-              backdropFilter: "blur(24px)",
-              WebkitBackdropFilter: "blur(24px)",
-              border: "1px solid rgba(255,255,255,0.35)",
-              boxShadow: "0 24px 80px rgba(30, 24, 18, 0.10)"
+              background: "rgba(255,255,255,0.16)",
+              backdropFilter: "blur(18px)",
+              WebkitBackdropFilter: "blur(18px)",
+              border: "1px solid rgba(255,255,255,0.28)",
+              boxShadow: "0 18px 50px rgba(30, 24, 18, 0.08)",
+              opacity: 0.82
             }}
           >
             <p className="text-[28px] leading-none">↗</p>
-            <p className="mt-2 text-lg">UI/UX Design</p>
-            <p className="mt-2 text-sm leading-6 text-[#4a4844]">Intuitive digital experiences.</p>
+            <p className="mt-2 text-base">UI/UX Design</p>
+            <p className="mt-1 text-xs leading-5 text-[#4a4844]">Intuitive digital experiences.</p>
           </div>
+        </div>
 
-          <div
-            className={`glass-reveal absolute bottom-[14%] right-[28%] z-[6] w-[230px] rounded-3xl p-5 text-[#2d2b28] ${
-              ready ? "translate-y-0 opacity-100 blur-0" : "translate-y-5 opacity-0 blur-[8px]"
-            }`}
-            style={{
-              transitionDelay: "0.82s",
-              background: "rgba(255,255,255,0.22)",
-              backdropFilter: "blur(24px)",
-              WebkitBackdropFilter: "blur(24px)",
-              border: "1px solid rgba(255,255,255,0.35)",
-              boxShadow: "0 24px 80px rgba(30, 24, 18, 0.10)"
-            }}
-          >
-            <p className="text-[28px] leading-none">↗</p>
-            <p className="mt-2 text-lg">Web Development</p>
-            <p className="mt-2 text-sm leading-6 text-[#4a4844]">Scalable front-end systems.</p>
-          </div>
         </div>
 
         <div className="col-span-full mt-4 flex md:hidden">
