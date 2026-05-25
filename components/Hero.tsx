@@ -38,8 +38,13 @@ export default function Hero() {
           100% { transform: translate3d(10px, -32px, 0); opacity: 0.25; }
         }
         .hero-island-size {
-          width: clamp(620px, 58vw, 980px);
+          width: clamp(760px, 68vw, 1180px);
           height: auto;
+        }
+        .glass-reveal {
+          transition-property: opacity, transform, filter, background-color;
+          transition-duration: 800ms;
+          transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
         }
       `}</style>
       <FallbackImage
@@ -54,18 +59,6 @@ export default function Hero() {
         }}
       />
 
-      <FallbackImage
-        src={islandSrc}
-        alt=""
-        width={980}
-        height={920}
-        priority
-        className="island-float absolute right-[-2vw] top-[12%] z-[2] hidden object-contain md:block hero-island-size"
-        style={{ filter: "drop-shadow(0 48px 80px rgba(40, 30, 20, 0.22))" }}
-        onError={() => {
-          if (islandSrc !== fallbackHeroImage) setIslandSrc(fallbackHeroImage);
-        }}
-      />
 
       <div className="relative z-[2] mx-auto w-full max-w-7xl px-6 pt-28 md:pt-36">
         <FallbackImage
@@ -93,7 +86,7 @@ export default function Hero() {
         <div className="hero-dust-delay pointer-events-none absolute right-[12%] top-[24%] h-1.5 w-1.5 rounded-full bg-[#cab08a]/45 blur-[1px]" />
         <div className="hero-dust pointer-events-none absolute right-[24%] top-[68%] h-2 w-2 rounded-full bg-[#d8c29d]/40 blur-[1px]" />
 
-        <div className="max-w-[520px] space-y-8 md:pr-6">
+        <div className="relative max-w-[520px] space-y-8 md:-translate-y-5 md:pr-6">
           <p
             className={`hero-reveal text-[11px] uppercase tracking-[0.34em] text-[#c9a46a] ${
               ready ? "translate-y-0 opacity-100 blur-0" : "translate-y-6 opacity-0 blur-sm"
@@ -143,7 +136,80 @@ export default function Hero() {
           </div>
         </div>
 
-        <div />
+        <div className="relative hidden md:block">
+          <FallbackImage
+            src={islandSrc}
+            alt=""
+            width={980}
+            height={920}
+            priority
+            className="island-float pointer-events-none absolute right-[-6vw] top-[8%] z-[2] h-auto object-contain hero-island-size"
+            style={{ filter: "drop-shadow(0 48px 80px rgba(40, 30, 20, 0.22))" }}
+            onError={() => {
+              if (islandSrc !== fallbackHeroImage) setIslandSrc(fallbackHeroImage);
+            }}
+          />
+
+          <div
+            className={`glass-reveal absolute right-0 top-[16%] z-[6] w-[210px] rounded-3xl p-5 text-[#2d2b28] ${
+              ready ? "translate-y-0 opacity-100 blur-0" : "translate-y-5 opacity-0 blur-[8px]"
+            }`}
+            style={{
+              transitionDelay: "0.58s",
+              background: "rgba(255,255,255,0.22)",
+              backdropFilter: "blur(24px)",
+              WebkitBackdropFilter: "blur(24px)",
+              border: "1px solid rgba(255,255,255,0.35)",
+              boxShadow: "0 24px 80px rgba(30, 24, 18, 0.10)"
+            }}
+          >
+            <p className="text-[28px] leading-none">↗</p>
+            <p className="mt-2 text-lg">Branding</p>
+            <p className="mt-2 text-sm leading-6 text-[#4a4844]">Emotional visual identity.</p>
+          </div>
+
+          <div
+            className={`glass-reveal absolute right-[1%] top-[42%] z-[6] w-[220px] rounded-3xl p-5 text-[#2d2b28] ${
+              ready ? "translate-y-0 opacity-100 blur-0" : "translate-y-5 opacity-0 blur-[8px]"
+            }`}
+            style={{
+              transitionDelay: "0.7s",
+              background: "rgba(255,255,255,0.22)",
+              backdropFilter: "blur(24px)",
+              WebkitBackdropFilter: "blur(24px)",
+              border: "1px solid rgba(255,255,255,0.35)",
+              boxShadow: "0 24px 80px rgba(30, 24, 18, 0.10)"
+            }}
+          >
+            <p className="text-[28px] leading-none">↗</p>
+            <p className="mt-2 text-lg">UI/UX Design</p>
+            <p className="mt-2 text-sm leading-6 text-[#4a4844]">Intuitive digital experiences.</p>
+          </div>
+
+          <div
+            className={`glass-reveal absolute bottom-[14%] right-[28%] z-[6] w-[230px] rounded-3xl p-5 text-[#2d2b28] ${
+              ready ? "translate-y-0 opacity-100 blur-0" : "translate-y-5 opacity-0 blur-[8px]"
+            }`}
+            style={{
+              transitionDelay: "0.82s",
+              background: "rgba(255,255,255,0.22)",
+              backdropFilter: "blur(24px)",
+              WebkitBackdropFilter: "blur(24px)",
+              border: "1px solid rgba(255,255,255,0.35)",
+              boxShadow: "0 24px 80px rgba(30, 24, 18, 0.10)"
+            }}
+          >
+            <p className="text-[28px] leading-none">↗</p>
+            <p className="mt-2 text-lg">Web Development</p>
+            <p className="mt-2 text-sm leading-6 text-[#4a4844]">Scalable front-end systems.</p>
+          </div>
+        </div>
+
+        <div className="col-span-full mt-4 flex md:hidden">
+          <div className="rounded-full px-4 py-2 text-xs text-[#2d2b28]" style={{ background: "rgba(255,255,255,0.22)", backdropFilter: "blur(24px)", WebkitBackdropFilter: "blur(24px)", border: "1px solid rgba(255,255,255,0.35)", boxShadow: "0 24px 80px rgba(30, 24, 18, 0.10)" }}>
+            UI/UX Design · Intuitive digital experiences.
+          </div>
+        </div>
       </div>
     </section>
   );
