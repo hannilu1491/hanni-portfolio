@@ -187,6 +187,9 @@ export default function Hero() {
             <p className="mt-2 text-[15px]">UI/UX Design</p>
             <p className="mt-1 text-[13px] leading-[1.5] text-[#4a4844]">Intuitive digital experiences.</p>
           </div>
+        </div>
+
+        </div>
 
         </div>
 
