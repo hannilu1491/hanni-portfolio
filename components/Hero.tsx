@@ -18,40 +18,53 @@ export default function Hero() {
 
   return (
     <section className="fade-in bg-[#fcfbf8]">
+      <style jsx>{`
+        .hero-banner-float {
+          animation: slowFloat 8s ease-in-out infinite alternate;
+        }
+        @keyframes slowFloat {
+          0% { transform: translate3d(0, 0, 0); }
+          100% { transform: translate3d(0, -8px, 0); }
+        }
+      `}</style>
       <div
-        className={`mx-auto grid max-w-7xl items-center gap-10 px-6 pb-16 pt-12 transition-all duration-700 ease-out md:grid-cols-[40%_60%] md:pb-20 md:pt-16 ${
+        className={`mx-auto grid max-w-7xl items-center gap-10 px-6 pb-16 pt-12 transition-all duration-700 ease-out md:grid-cols-[38%_62%] md:pb-20 md:pt-16 ${
           ready ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
         }`}
       >
         <div className="space-y-8 md:pr-6">
           <p
-            className={`text-[11px] uppercase tracking-[0.34em] text-[#c8a46a] transition-all duration-700 delay-75 ${
+            className={`text-[11px] uppercase tracking-[0.34em] text-[#c8a46a] transition-all duration-700 ${
               ready ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
             }`}
+            style={{ transitionDelay: "0s" }}
           >
             UI/UX DESIGNER · VISUAL STORYTELLER
           </p>
 
           <h1
-            className={`font-serif text-[56px] leading-[0.94] tracking-[-0.032em] text-[#151515] transition-all duration-700 delay-100 md:text-[88px] lg:text-[100px] ${
+            className={`font-serif text-[56px] leading-[0.92] tracking-[-0.034em] text-[#151515] transition-all duration-700 md:text-[94px] lg:text-[108px] ${
               ready ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
             }`}
+            style={{ transitionDelay: "0.12s" }}
           >
             Hanni Lu<span className="text-[#c8a46a]">.</span>
           </h1>
 
           <p
-            className={`max-w-md text-[15px] leading-8 text-[#4d4d4d] transition-all duration-700 delay-150 md:text-base ${
+            className={`max-w-md text-[15px] leading-8 text-[#4d4d4d] transition-all duration-700 md:text-base ${
               ready ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
             }`}
+            style={{ transitionDelay: "0.24s" }}
           >
             Premium digital experiences crafted with refined visual rhythm and editorial storytelling.
           </p>
 
           <div
-            className={`flex flex-wrap gap-4 transition-all duration-700 delay-200 ${
+            className={`flex flex-wrap gap-4 transition-all duration-700 ${
               ready ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
             }`}
+            style={{ transitionDelay: "0.36s" }}
           >
             <Link
               href="/projects"
@@ -69,28 +82,28 @@ export default function Hero() {
         </div>
 
         <div
-          className={`relative h-[560px] transition-all duration-700 delay-300 ${
-            ready ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+          className={`hero-banner-float relative h-[620px] transition-all duration-[900ms] ${
+            ready ? "translate-y-0 scale-100 opacity-100" : "translate-y-7 scale-[0.98] opacity-0"
           }`}
+          style={{ transitionDelay: "0.42s" }}
         >
           <div
-            className={`relative h-full w-full overflow-hidden rounded-[36px] border border-[#efe5d9] bg-white shadow-[0_38px_90px_rgba(20,18,15,0.2)] transition-all duration-700 ${
-              ready ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
-            }`}
+            className="relative -right-[4vw] h-full w-[calc(100%+4vw)] overflow-hidden rounded-[40px] bg-[#f5efe7] shadow-[0_44px_110px_rgba(30,24,18,0.16),0_0_70px_rgba(230,214,193,0.45)]"
           >
             <FallbackImage
               src={imageSrc}
               alt=""
-              width={1280}
-              height={1120}
+              width={1500}
+              height={1240}
               priority
-              className="h-full w-full object-cover transition duration-700 hover:scale-[1.02]"
+              className="h-full w-full object-cover transition duration-[900ms] hover:scale-[1.025]"
               onError={() => {
                 if (imageSrc !== fallbackHeroImage) {
                   setImageSrc(fallbackHeroImage);
                 }
               }}
             />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-[#efe3d1] via-transparent to-[#e7d8c5] opacity-10" />
             <div className="hero-motion-layer pointer-events-none absolute inset-0" />
           </div>
         </div>
