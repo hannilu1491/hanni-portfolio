@@ -4,8 +4,8 @@ import FallbackImage from "./FallbackImage";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const primaryHeroImage = "/images/projects/uiux-multimedia/uiux-multimedia-hero-banner.jpg";
-const fallbackHeroImage = "/images/hero/homepage-hero-banner.jpg";
+const primaryHeroImage = "/images/hero/hero-floating-island.png";
+const fallbackHeroImage = "/images/hero/hero-floating-island.png";
 
 export default function Hero() {
   const [imageSrc, setImageSrc] = useState(primaryHeroImage);
