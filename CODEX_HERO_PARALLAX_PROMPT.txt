@@ -1,0 +1,35 @@
+請直接修改目前 repository，不要建立新專案。
+
+我已新增首頁 Hero 視差素材，請讀取：
+
+- public/images/hero/parallax/
+- data/hero-assets.ts
+- hero-assets-map.json
+
+請將首頁 Hero 改成 mushroom.store 參考方向的「高級 editorial parallax hero」。
+
+需求：
+
+1. 使用 data/hero-assets.ts 的 heroAssets array，不要把素材路徑寫死在 component 裡。
+2. Hero 右側只保留少量主要元素，不要堆滿：
+   - background nature layer
+   - main browser board
+   - mobile mockup
+   - 2–3 個 floating cards
+   - 1–2 個 nature elements
+   - foreground shadow
+3. 不可以出現破圖 alt text，例如 leaf 02 / flower / mobile mockup。
+   如果圖片不存在，請不要渲染該元素或使用 fallback。
+4. 做出 mouse parallax + scroll parallax：
+   - background speed 0.08
+   - main layer speed 0.18
+   - floating layer speed 0.35–0.55
+   - foreground speed 0.65
+5. 動效要慢、柔、高級、有空氣感。
+6. CTA 按鈕文字不可擠在一起，不可換行重疊。
+7. Hero 左右比例請保持：
+   left 45%, right 55%
+8. Mobile 版簡化，不要破版。
+9. npm run build 成功。
+
+請不要再新增更多素材或更多疊圖。這次重點是「克制、留白、高級、可替換」。

@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+import FallbackImage from "./FallbackImage";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -92,6 +92,11 @@ export default function Hero() {
             <p className="text-[15px]">Branding</p>
             <p className="mt-1 text-[13px] leading-[1.5] text-[#4a4844]">Emotional visual identity.</p>
           </div>
+        </div>
+
+        </div>
+
+        </div>
 
           <div
             className="absolute right-[9vw] top-[45%] z-[6] w-[190px] rounded-[22px] p-[18px] text-[#2d2b28]"
