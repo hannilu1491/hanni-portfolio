@@ -4,8 +4,8 @@ import FallbackImage from "./FallbackImage";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const primaryHeroImage = "/images/hero/hero-floating-island.png";
-const fallbackHeroImage = "/images/hero/hero-floating-island.png";
+const primaryHeroImage = "/images/projects/uiux-multimedia/uiux-multimedia-hero-banner.jpg";
+const fallbackHeroImage = "/images/hero/homepage-hero-banner.jpg";
 
 export default function Hero() {
   const [imageSrc, setImageSrc] = useState(primaryHeroImage);
@@ -105,7 +105,7 @@ export default function Hero() {
         </div>
 
         <div
-          className={`hero-banner-float hero-reveal relative h-[720px] transition-all duration-[900ms] ${
+          className={`hero-banner-float hero-reveal relative h-[820px] transition-all duration-[900ms] ${
             ready ? "translate-y-0 scale-100 opacity-100 blur-0" : "translate-y-7 scale-[0.98] opacity-0 blur-sm"
           }`}
           style={{ transitionDelay: "0.42s" }}
@@ -113,15 +113,18 @@ export default function Hero() {
           <div className="pointer-events-none absolute -left-12 top-[16%] h-[180px] w-[180px] rounded-full bg-[#f1e6d6]/70 blur-[56px]" />
           <div className="pointer-events-none absolute -right-16 bottom-10 h-[220px] w-[220px] rounded-full bg-[#e5d7c3]/65 blur-[64px]" />
           <div
-            className="relative -right-[4vw] h-full w-[calc(100%+4vw)] overflow-hidden rounded-[40px] bg-[#f5efe7] shadow-[0_52px_120px_rgba(27,23,18,0.15),0_0_95px_rgba(232,219,199,0.62)]"
+            className="relative -right-[4vw] h-full w-[calc(100%+4vw)] rounded-[40px] bg-[#f5efe7] p-8 shadow-[0_52px_120px_rgba(27,23,18,0.15),0_0_95px_rgba(232,219,199,0.62)]"
           >
+            <div className="pointer-events-none absolute inset-0 rounded-[40px] bg-[radial-gradient(circle_at_64%_44%,rgba(255,255,255,0.78),rgba(244,235,224,0.62)_42%,rgba(232,221,205,0.46)_72%,rgba(220,205,186,0.36)_100%)]" />
+            <div className="pointer-events-none absolute inset-x-6 bottom-8 top-10 rounded-[34px] bg-[radial-gradient(circle_at_52%_65%,rgba(198,182,159,0.22),transparent_66%)] blur-xl" />
             <FallbackImage
               src={imageSrc}
               alt=""
               width={1500}
               height={1240}
               priority
-              className="h-full w-full object-cover transition duration-[900ms] hover:scale-[1.02]"
+              className="h-full w-full object-contain transition duration-[900ms] hover:scale-[1.02]"
+              style={{ objectPosition: "60% center" }}
               onError={() => {
                 if (imageSrc !== fallbackHeroImage) {
                   setImageSrc(fallbackHeroImage);
