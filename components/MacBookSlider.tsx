@@ -1,12 +1,12 @@
 'use client';
 
-import Image from 'next/image';
+import FallbackImage from './FallbackImage';
 import { useEffect, useRef, useState } from 'react';
 
 type FrameVariant = 'macbook' | 'browser' | 'plain';
 
 export default function MacBookSlider({ images, frameVariant = 'macbook', autoPlay = true, interval = 6200 }: { images: string[]; frameVariant?: FrameVariant; autoPlay?: boolean; interval?: number }) {
-  const safe = images.length ? images.slice(0, 5) : ['/images/projects/uiux-multimedia/uiux-pet-hotel-official-website.avif'];
+  const safe = images.length ? images.slice(0, 5) : ['/images/hero/homepage-hero-banner.jpg'];
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const touchX = useRef<number | null>(null);
@@ -31,7 +31,7 @@ export default function MacBookSlider({ images, frameVariant = 'macbook', autoPl
           <div className="rounded-[22px] border border-[#7f858f] bg-[#171a1f] p-[8px]">
             <div className="relative h-[56vw] max-h-[590px] min-h-[260px] overflow-hidden rounded-[14px] bg-[#f7f2ea]">
               {safe.map((src, i) => (
-                <Image key={src + i} src={src} alt={`MacBook showcase ${i + 1}`} fill className={`object-contain transition-all duration-700 ${i === index ? 'opacity-100' : 'pointer-events-none opacity-0'}`} />
+                <FallbackImage key={src + i} src={src} alt={`MacBook showcase ${i + 1}`} fill className={`object-contain transition-all duration-700 ${i === index ? 'opacity-100' : 'pointer-events-none opacity-0'}`} />
               ))}
             </div>
           </div>
