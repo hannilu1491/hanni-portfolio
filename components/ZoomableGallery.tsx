@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+import FallbackImage from './FallbackImage';
 import { useEffect, useRef, useState } from 'react';
 
 export default function ZoomableGallery({ images, masonry = false }: { images: string[]; masonry?: boolean }) {
@@ -29,7 +29,7 @@ export default function ZoomableGallery({ images, masonry = false }: { images: s
         {images.map((src, i) => (
           <button key={src + i} onClick={() => open(i)} className="group relative block w-full overflow-hidden rounded-2xl text-left">
             <div className={`relative ${masonry ? 'mb-4 h-auto min-h-[280px]' : 'h-[420px]'}`}>
-              <Image src={src} alt={`Project image ${i + 1}`} fill className="object-cover transition duration-700 group-hover:scale-[1.03]" />
+              <FallbackImage src={src} alt={`Project image ${i + 1}`} fill className="object-cover transition duration-700 group-hover:scale-[1.03]" />
             </div>
           </button>
         ))}
@@ -51,7 +51,7 @@ export default function ZoomableGallery({ images, masonry = false }: { images: s
           <button className="absolute right-6 top-6 text-white/90" onClick={close}>✕</button>
           <button className="absolute left-6 top-1/2 -translate-y-1/2 text-3xl text-white/80" onClick={(e) => { e.stopPropagation(); prev(); }}>‹</button>
           <div className="relative h-[82vh] w-full max-w-6xl" onClick={(e) => e.stopPropagation()}>
-            <Image src={images[index]} alt={`Fullscreen image ${index + 1}`} fill className="object-contain transition duration-300" />
+            <FallbackImage src={images[index]} alt={`Fullscreen image ${index + 1}`} fill className="object-contain transition duration-300" />
           </div>
           <button className="absolute right-6 top-1/2 -translate-y-1/2 text-3xl text-white/80" onClick={(e) => { e.stopPropagation(); next(); }}>›</button>
         </div>
