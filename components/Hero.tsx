@@ -1,11 +1,11 @@
 "use client";
 
-import Image from "next/image";
+import FallbackImage from "./FallbackImage";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const primaryHeroImage = "/images/projects/uiux-multimedia/uiux-pet-hotel-showcase.avif";
-const fallbackHeroImage = "/images/placeholder.jpg";
+const primaryHeroImage = "/images/projects/uiux-multimedia/uiux-multimedia-hero-banner.jpg";
+const fallbackHeroImage = "/images/hero/homepage-hero-banner.jpg";
 
 export default function Hero() {
   const [imageSrc, setImageSrc] = useState(primaryHeroImage);
@@ -19,7 +19,7 @@ export default function Hero() {
   return (
     <section className="fade-in bg-[#fcfbf8]">
       <div
-        className={`mx-auto grid max-w-7xl items-center gap-10 px-6 pb-20 pt-16 transition-all duration-700 ease-out md:grid-cols-[40%_60%] ${
+        className={`mx-auto grid max-w-7xl items-center gap-10 px-6 pb-16 pt-12 transition-all duration-700 ease-out md:grid-cols-[40%_60%] md:pb-20 md:pt-16 ${
           ready ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
         }`}
       >
@@ -33,7 +33,7 @@ export default function Hero() {
           </p>
 
           <h1
-            className={`font-serif text-[62px] leading-[0.94] tracking-[-0.03em] text-[#151515] transition-all duration-700 delay-100 md:text-[88px] lg:text-[100px] ${
+            className={`font-serif text-[56px] leading-[0.94] tracking-[-0.032em] text-[#151515] transition-all duration-700 delay-100 md:text-[88px] lg:text-[100px] ${
               ready ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
             }`}
           >
@@ -41,7 +41,7 @@ export default function Hero() {
           </h1>
 
           <p
-            className={`max-w-md text-base leading-8 text-[#4d4d4d] transition-all duration-700 delay-150 ${
+            className={`max-w-md text-[15px] leading-8 text-[#4d4d4d] transition-all duration-700 delay-150 md:text-base ${
               ready ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
             }`}
           >
@@ -69,42 +69,29 @@ export default function Hero() {
         </div>
 
         <div
-          className={`relative h-[520px] transition-all duration-700 delay-300 ${
+          className={`relative h-[560px] transition-all duration-700 delay-300 ${
             ready ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
           }`}
         >
-          <div className="absolute left-[8%] top-[9%] h-[76%] w-[82%] rounded-[42px] bg-[#e9dfd2]/60 blur-3xl" />
-
-          <div className="absolute left-[7%] top-[5%] w-[84%] overflow-hidden rounded-[34px] border border-[#e9dfd2] bg-white shadow-[0_36px_80px_rgba(20,18,15,0.18)] transition duration-500 hover:scale-[1.01]">
-            <Image
+          <div
+            className={`relative h-full w-full overflow-hidden rounded-[36px] border border-[#efe5d9] bg-white shadow-[0_38px_90px_rgba(20,18,15,0.2)] transition-all duration-700 ${
+              ready ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+            }`}
+          >
+            <FallbackImage
               src={imageSrc}
-              alt="Hanni Lu portfolio showcase"
+              alt=""
               width={1280}
-              height={840}
+              height={1120}
               priority
-              className="h-[430px] w-full object-cover"
+              className="h-full w-full object-cover transition duration-700 hover:scale-[1.02]"
               onError={() => {
                 if (imageSrc !== fallbackHeroImage) {
                   setImageSrc(fallbackHeroImage);
                 }
               }}
             />
-          </div>
-
-          <div className="absolute right-[3%] top-[16%] w-[220px] rounded-3xl border border-[#e9dfd2] bg-white px-5 py-4 shadow-[0_24px_48px_rgba(20,18,15,0.12)] transition duration-300 hover:-translate-y-1">
-            <p className="text-[10px] uppercase tracking-[0.28em] text-[#c8a46a]">Brand System</p>
-            <div className="mt-3 grid grid-cols-3 gap-2">
-              <span className="h-11 rounded-xl bg-[#151515]" />
-              <span className="h-11 rounded-xl bg-[#c8a46a]" />
-              <span className="h-11 rounded-xl bg-[#efe6da]" />
-            </div>
-            <p className="mt-3 text-xs leading-5 text-[#5f5b55]">Warm, natural, and trustworthy visual language.</p>
-          </div>
-
-          <div className="absolute bottom-[8%] left-[2%] w-[210px] rounded-3xl border border-[#e9dfd2] bg-white px-5 py-4 shadow-[0_24px_48px_rgba(20,18,15,0.12)] transition duration-300 hover:-translate-y-1">
-            <p className="text-[10px] uppercase tracking-[0.28em] text-[#c8a46a]">UI Detail</p>
-            <p className="mt-2 font-serif text-4xl leading-none text-[#151515]">Aa</p>
-            <p className="mt-2 text-xs leading-5 text-[#5f5b55]">Editorial type scale with refined rhythm.</p>
+            <div className="hero-motion-layer pointer-events-none absolute inset-0" />
           </div>
         </div>
       </div>
