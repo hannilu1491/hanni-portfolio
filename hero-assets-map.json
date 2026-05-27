@@ -1,0 +1,67 @@
+{
+  "heroAssets": [
+    {
+      "name": "background",
+      "src": "/images/hero/parallax/hero-bg-nature-soft.jpg",
+      "type": "background",
+      "speed": 0.08,
+      "note": "首頁背景自然光與植物陰影"
+    },
+    {
+      "name": "mainBrowserBoard",
+      "src": "/images/hero/parallax/hero-main-browser-board.png",
+      "type": "main",
+      "speed": 0.18,
+      "note": "Hero 右側主網站卡片，可替換成作品截圖 mockup"
+    },
+    {
+      "name": "mobileMockup",
+      "src": "/images/hero/parallax/hero-mobile-mockup.png",
+      "type": "foreground",
+      "speed": 0.35,
+      "note": "手機 mockup 前景層"
+    },
+    {
+      "name": "brandCard",
+      "src": "/images/hero/parallax/floating-brand-card.png",
+      "type": "floating",
+      "speed": 0.45,
+      "note": "品牌卡片浮動素材"
+    },
+    {
+      "name": "typographyCard",
+      "src": "/images/hero/parallax/floating-typography-card.png",
+      "type": "floating",
+      "speed": 0.42,
+      "note": "字體卡片浮動素材"
+    },
+    {
+      "name": "colorPalette",
+      "src": "/images/hero/parallax/floating-color-palette.png",
+      "type": "floating",
+      "speed": 0.55,
+      "note": "色票裝飾浮動素材"
+    },
+    {
+      "name": "leaf01",
+      "src": "/images/hero/parallax/floating-leaf-01.png",
+      "type": "nature",
+      "speed": 0.5,
+      "note": "自然元素葉子，可替換"
+    },
+    {
+      "name": "leaf02",
+      "src": "/images/hero/parallax/floating-leaf-02.png",
+      "type": "nature",
+      "speed": 0.6,
+      "note": "自然元素葉子，可替換"
+    },
+    {
+      "name": "foregroundShadow",
+      "src": "/images/hero/parallax/foreground-soft-shadow.png",
+      "type": "foreground",
+      "speed": 0.65,
+      "note": "前景柔霧陰影層"
+    }
+  ]
+}
