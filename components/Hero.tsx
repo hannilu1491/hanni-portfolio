@@ -65,14 +65,14 @@ export default function Hero() {
         </div>
 
         <div className="relative hidden md:block">
-          <div className="pointer-events-none absolute right-[-5vw] top-[18%] z-10 island-float max-w-none">
+          <div className="pointer-events-none absolute right-[-6vw] top-[17%] z-10 island-float max-w-none">
             <Image
               src={islandSrc}
               alt=""
               width={1200}
               height={960}
               priority
-              className="absolute right-[-5vw] top-[18%] z-10 h-auto w-[clamp(780px,64vw,1140px)] max-w-none object-contain"
+              className="absolute right-[-6vw] top-[17%] z-10 h-auto w-[clamp(810px,66vw,1180px)] max-w-none object-contain"
               style={{ filter: "drop-shadow(0 48px 80px rgba(40, 30, 20, 0.22))" }}
               onError={() => {
                 if (islandSrc !== FALLBACK_IMAGE) setIslandSrc(FALLBACK_IMAGE);
@@ -81,7 +81,7 @@ export default function Hero() {
           </div>
 
           <div
-            className="absolute right-[11vw] top-[22%] z-[12] hidden w-[190px] rounded-[22px] p-[18px] text-[#2d2b28] md:block"
+            className="absolute right-[12vw] top-[23%] z-[12] hidden w-[190px] rounded-[22px] p-[18px] text-[#2d2b28] opacity-80 md:block"
             style={{
               background: "rgba(255,255,255,0.14)",
               backdropFilter: "blur(18px)",
@@ -97,7 +97,7 @@ export default function Hero() {
         </div>
 
           <div
-            className="absolute right-[7vw] top-[44%] z-[12] hidden w-[190px] rounded-[22px] p-[18px] text-[#2d2b28] md:block"
+            className="absolute right-[8vw] top-[47%] z-[12] hidden w-[190px] rounded-[22px] p-[18px] text-[#2d2b28] opacity-80 md:block"
             style={{
               background: "rgba(255,255,255,0.14)",
               backdropFilter: "blur(18px)",
