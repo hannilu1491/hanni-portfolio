@@ -19,7 +19,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-screen overflow-hidden bg-[#f8f5f1]">
+    <section className="relative min-h-[92vh] overflow-x-clip overflow-y-hidden bg-[#f8f5f1]">
       <Image
         src={bgSrc}
         alt=""
@@ -34,7 +34,7 @@ export default function Hero() {
       <div className="pointer-events-none absolute -left-20 top-16 h-72 w-72 rounded-full bg-[#efe3d3]/60 blur-[90px]" />
       <div className="pointer-events-none absolute -right-20 bottom-[-80px] h-80 w-80 rounded-full bg-[#e7d9c8]/55 blur-[100px]" />
 
-      <div className="relative z-10 mx-auto grid min-h-screen w-full max-w-7xl items-start px-6 pb-16 pt-28 md:grid-cols-[38%_62%] md:pt-36">
+      <div className="relative z-10 mx-auto grid min-h-[92vh] w-full max-w-7xl items-start px-6 pb-16 pt-28 md:grid-cols-[38%_62%] md:pt-36">
         <div
           className={`max-w-[520px] space-y-8 transition-all duration-700 ${
             ready ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
@@ -65,14 +65,14 @@ export default function Hero() {
         </div>
 
         <div className="relative hidden md:block">
-          <div className="pointer-events-none absolute right-[-4vw] top-[24%] z-[2] island-float">
+          <div className="pointer-events-none absolute right-[-4vw] top-[20%] z-10 island-float max-w-none">
             <Image
               src={islandSrc}
               alt=""
               width={1200}
               height={960}
               priority
-              className="h-auto w-[clamp(760px,62vw,1120px)] object-contain"
+              className="absolute right-[-4vw] top-[20%] z-10 h-auto w-[clamp(760px,62vw,1100px)] max-w-none object-contain"
               style={{ filter: "drop-shadow(0 48px 80px rgba(40, 30, 20, 0.22))" }}
               onError={() => {
                 if (islandSrc !== FALLBACK_IMAGE) setIslandSrc(FALLBACK_IMAGE);
@@ -81,9 +81,9 @@ export default function Hero() {
           </div>
 
           <div
-            className="absolute right-[13vw] top-[28%] z-[6] w-[190px] rounded-[22px] p-[18px] text-[#2d2b28]"
+            className="absolute right-[12vw] top-[20%] z-[12] hidden w-[190px] rounded-[22px] p-[18px] text-[#2d2b28] md:block"
             style={{
-              background: "rgba(255,255,255,0.18)",
+              background: "rgba(255,255,255,0.14)",
               backdropFilter: "blur(18px)",
               WebkitBackdropFilter: "blur(18px)",
               border: "1px solid rgba(255,255,255,0.28)",
@@ -97,9 +97,9 @@ export default function Hero() {
         </div>
 
           <div
-            className="absolute right-[9vw] top-[45%] z-[6] w-[190px] rounded-[22px] p-[18px] text-[#2d2b28]"
+            className="absolute right-[6vw] top-[42%] z-[12] hidden w-[190px] rounded-[22px] p-[18px] text-[#2d2b28] md:block"
             style={{
-              background: "rgba(255,255,255,0.18)",
+              background: "rgba(255,255,255,0.14)",
               backdropFilter: "blur(18px)",
               WebkitBackdropFilter: "blur(18px)",
               border: "1px solid rgba(255,255,255,0.28)",
