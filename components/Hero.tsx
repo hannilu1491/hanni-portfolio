@@ -19,7 +19,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-[92vh] overflow-x-clip overflow-y-hidden bg-[#f8f5f1]">
+    <section className="relative min-h-[94vh] overflow-x-clip overflow-y-hidden bg-[#f8f5f1]">
       <Image
         src={bgSrc}
         alt=""
@@ -34,7 +34,7 @@ export default function Hero() {
       <div className="pointer-events-none absolute -left-20 top-16 h-72 w-72 rounded-full bg-[#efe3d3]/60 blur-[90px]" />
       <div className="pointer-events-none absolute -right-20 bottom-[-80px] h-80 w-80 rounded-full bg-[#e7d9c8]/55 blur-[100px]" />
 
-      <div className="relative z-10 mx-auto grid min-h-[92vh] w-full max-w-7xl items-start px-6 pb-16 pt-28 md:grid-cols-[38%_62%] md:pt-36">
+      <div className="relative z-10 mx-auto grid min-h-[94vh] w-full max-w-7xl items-start px-6 pb-16 pt-28 md:grid-cols-[38%_62%] md:pt-36">
         <div
           className={`max-w-[520px] space-y-8 transition-all duration-700 ${
             ready ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
@@ -48,7 +48,7 @@ export default function Hero() {
             Premium digital experiences with calm rhythm, intuitive flow, and purposeful storytelling.
           </p>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="flex flex-wrap gap-5">
             <Link
               href="/projects"
               className="whitespace-nowrap rounded-full bg-[#111111] px-7 py-3 text-sm text-white shadow-[0_16px_34px_rgba(17,17,17,0.2)] transition duration-500 hover:-translate-y-1 hover:shadow-[0_22px_42px_rgba(17,17,17,0.24)]"
@@ -65,14 +65,14 @@ export default function Hero() {
         </div>
 
         <div className="relative hidden md:block">
-          <div className="pointer-events-none absolute right-[-4vw] top-[20%] z-10 island-float max-w-none">
+          <div className="pointer-events-none absolute right-[-5vw] top-[18%] z-10 island-float max-w-none">
             <Image
               src={islandSrc}
               alt=""
               width={1200}
               height={960}
               priority
-              className="absolute right-[-4vw] top-[20%] z-10 h-auto w-[clamp(760px,62vw,1100px)] max-w-none object-contain"
+              className="absolute right-[-5vw] top-[18%] z-10 h-auto w-[clamp(780px,64vw,1140px)] max-w-none object-contain"
               style={{ filter: "drop-shadow(0 48px 80px rgba(40, 30, 20, 0.22))" }}
               onError={() => {
                 if (islandSrc !== FALLBACK_IMAGE) setIslandSrc(FALLBACK_IMAGE);
@@ -81,7 +81,7 @@ export default function Hero() {
           </div>
 
           <div
-            className="absolute right-[12vw] top-[20%] z-[12] hidden w-[190px] rounded-[22px] p-[18px] text-[#2d2b28] md:block"
+            className="absolute right-[11vw] top-[22%] z-[12] hidden w-[190px] rounded-[22px] p-[18px] text-[#2d2b28] md:block"
             style={{
               background: "rgba(255,255,255,0.14)",
               backdropFilter: "blur(18px)",
@@ -97,7 +97,7 @@ export default function Hero() {
         </div>
 
           <div
-            className="absolute right-[6vw] top-[42%] z-[12] hidden w-[190px] rounded-[22px] p-[18px] text-[#2d2b28] md:block"
+            className="absolute right-[7vw] top-[44%] z-[12] hidden w-[190px] rounded-[22px] p-[18px] text-[#2d2b28] md:block"
             style={{
               background: "rgba(255,255,255,0.14)",
               backdropFilter: "blur(18px)",
